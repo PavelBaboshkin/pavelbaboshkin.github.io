@@ -10,7 +10,3 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-
-Я Паша, тут пишу есть темы
-
-

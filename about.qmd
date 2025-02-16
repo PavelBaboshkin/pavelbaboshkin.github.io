@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Author"
 image: profile.jpg
 about:
   template: jolla
@@ -10,7 +10,6 @@ about:
     - icon: telegram
       text: Telegram Personal
       href: https://t.me/PavelBaboshkin
-
 ---
 
 Я Паша, тут пишу

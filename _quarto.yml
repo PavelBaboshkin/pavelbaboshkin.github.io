@@ -3,12 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "blog"
+  title: "Blog"
   navbar:
     right:
       - about.qmd
       - icon: telegram
-        text: Telegram Channel
         href: https://t.me/PavelBaboshkin_channel
 
 format:
