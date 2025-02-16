@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: ""
+  open-graph: true
+  google-analytics: "G-JJNXYRZ5C4"
+  favicon: "favicon.png"
+  draft-mode: unlinked
+
+  navbar:
+    pinned: true
+    collapse: false
+    left:
+    - text: Blog
+      href: index.qmd
+    - text: Notes
+      file: notes/index.qmd
+    - icon: telegram
+      href: https://t.me/PavelBaboshkin_channel
+
+  sidebar:
+    - title: Notes
+      pinned: false
+      collapse-level: 1
+      style: docked
+      contents: notes/
+
+format:
+  html:
+    title-block-style: plain
+    reference-location: document
+    theme:
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: true

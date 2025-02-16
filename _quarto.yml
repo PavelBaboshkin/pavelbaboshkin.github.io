@@ -1,25 +1,35 @@
 project:
   type: website
-  output-dir: docs
-  title: "Pablo science"
-site:
-  favicon: "favicon.png"
+
+exeucte:
+  eval: false
 
 website:
+  title: "Pablo Blog"
+  image: quarto.png
+  google-analytics: "G-JJNXYRZ5C4"
+  favicon: resources/favicon.png
+  open-graph: true
+
+  description: "A collection of blogs and talks on machine learning and data science."
+
+  repo-url: https://github.com/hamelsmu/hamel-site
+  repo-actions: [edit]
+
+  draft-mode: unlinked
+
   navbar:
-    title: true
+    title: false
+    background: dark
     pinned: true
     collapse: false
     left:
-    - text: Blog
+    - text: "Blog"
       href: index.qmd
     - text: Notes
       file: notes/index.qmd
     - icon: telegram
       href: https://t.me/PavelBaboshkin_channel
-  google-analytics:
-    tracking-id: "G-JJNXYRZ5C4"
-    anonymize-ip: true
 
   sidebar:
     - title: Notes
@@ -30,7 +40,10 @@ website:
 
 format:
   html:
-    theme:
-      dark: darkly
-      light: flatly
-    css: styles.css
+    reference-location: document
+    theme: 
+      dark: [solar, resources/custom.scss]
+      light: [flatly, resources/custom-light.scss]
+    css:
+      - resources/styles.css
+    toc: true

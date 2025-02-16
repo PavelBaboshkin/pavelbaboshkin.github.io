@@ -1,0 +1,34 @@
+---
+navbar: true
+sidebar: false
+description: "Personal blog"
+toc: true
+listing:
+  date-format: short
+  feed: true
+  contents: notes
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  id: blog-listings
+  exclude:
+      path: "**/index.qmd"
+page-layout: full
+format:
+  html:
+    anchor-sections: true
+---
+
+Привет!
+
+Я Паша - учусь и работаю в области анализа данных. Немного поработал в Ozon и TBank, побольше поработал в Raiffeisen bank и Vkusvill, сейчас тружусь как Team Lead Data Analyst в Magnit. 
+
+Сюда пишу содержательые заметки об аналитике, ИИ, учебе и проектах. 
+Ежедневно вещаю в телеграм канале [Pablo science](https://t.me/PavelBaboshkin_channel)
+
+Последние заметки: 
+
+::: {#blog-listings}
+:::
