@@ -1,0 +1,10 @@
+search: true
+listing:
+  sort: date
+  fields: [date, title, description]
+  type: table
+  sort-ui: false
+  filter-ui: false
+  max-description-length: 50
+  
+margin-footer: <br>

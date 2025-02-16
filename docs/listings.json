@@ -1,10 +1,37 @@
 [
   {
+    "listing": "/notes/causal inference/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/books/index.html",
+    "items": [
+      "/notes/books/Data for the People by Andreas Wiegend.html",
+      "/notes/books/Summa Technologiae by Stanislaw Lem.html",
+      "/notes/books/Agent of Influence by Janson Hanson.html",
+      "/notes/books/Games People Play by Eric Berne.html",
+      "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
+      "/notes/books/The Autobiography of Benjamin Franklin.html",
+      "/notes/books/How to see George Nelson.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/2024_02_16 test ipynb post/test.html",
-      "/posts/welcome/index.html"
+      "/notes/books/How to see George Nelson.html",
+      "/notes/books/The Autobiography of Benjamin Franklin.html",
+      "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
+      "/notes/books/Agent of Influence by Janson Hanson.html",
+      "/notes/books/Games People Play by Eric Berne.html",
+      "/notes/books/Summa Technologiae by Stanislaw Lem.html",
+      "/notes/books/Data for the People by Andreas Wiegend.html"
+    ]
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/books/index.html",
+      "/notes/causal inference/index.html"
     ]
   }
 ]

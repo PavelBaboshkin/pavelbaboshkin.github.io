@@ -1,0 +1,5 @@
+---
+title: Causal Inference
+description: Мое погружение в мир причинно-следственного анализа
+metadata-files: ["../_listing_meta.yml"]
+---
