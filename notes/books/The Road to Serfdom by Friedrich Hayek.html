@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Мое погружение в мир причинно-следственного анализа">
+<meta name="dcterms.date" content="2024-08-08">
+<meta name="description" content="Эссе о политике и экономике от левого крыла середины XX века">
 
-<title>Causal Inference</title>
+<title>The Road to Serfdom by Friedrich Hayek</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,70 +69,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-data','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: [],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -165,7 +106,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../notes/causal inference/index.html">Causal Inference</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Book notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html">The Road to Serfdom by Friedrich Hayek</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -174,20 +115,29 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../notes/causal inference/index.html">Causal Inference</a></li></ol></nav>
-      <h1 class="title">Causal Inference</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Book notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html">The Road to Serfdom by Friedrich Hayek</a></li></ol></nav>
+      <h1 class="title">The Road to Serfdom by Friedrich Hayek</h1>
                   <div>
         <div class="description">
-          Мое погружение в мир причинно-следственного анализа
+          Эссе о политике и экономике от левого крыла середины XX века
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">books</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 8, 2024</p>
+      </div>
+    </div>
     
       
     </div>
@@ -209,7 +159,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/causal inference/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notes/causal inference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Causal Inference</span></a>
   </div>
 </li>
@@ -217,11 +167,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../notes/books/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Book notes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/books/Agent of Influence by Janson Hanson.html" class="sidebar-item-text sidebar-link">
@@ -260,7 +210,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">The Road to Serfdom by Friedrich Hayek</span></a>
   </div>
 </li>
@@ -273,11 +223,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-margin-footer"><div class="margin-footer-item">
-<p><br></p>
-</div></div></div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -285,32 +231,76 @@ window.Quarto = {
 
 
 
+<p>Обзоров в интернете хватает, мне кажется вполне достаточным посмотреть эти 3 документа по теме: <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%80%D0%BE%D0%B3%D0%B0_%D0%BA_%D1%80%D0%B0%D0%B1%D1%81%D1%82%D0%B2%D1%83">вики</a>, <a href="https://cdn.mises.org/Road%20to%20Serfdom%20in%20Cartoons.pdf">комикс от журнала Look</a>, <a href="https://ancapchan.info/2020/01/02/3443/">политический блог</a>. Для особо упорных еще может быть интересно посмотреть рецензии в онлайн магазинах книг, особенно занимательные там полярные мнения от ярых либералов или социалистов, как, например, <a href="https://www.livelib.ru/review/3504700-doroga-k-rabstvu-fridrih-avgust-fon-hajek#comments">тут</a>.</p>
+<p>Для своего же конспекта просто хочу зафиксировать фразы автора и свои мысли к ним:</p>
+<blockquote class="blockquote">
+<p>… может быть, наиболее значительным последствием всех этих достижений следует считать совершенно новое ощущение власти человека над своей судьбой и убеждение в неограниченности возможностей совершенствования условий жизни. Успехи рождали новые устремления, а по мере того, как многообещающие перспективы становились повседневной реальностью, человек хотел двигаться вперед все быстрее.</p>
+</blockquote>
+<p>Соглашусь, что ощутимое влияние усилий на улучшение благосостояния – отличный стимул для развития, но не уверен, что он может одинаково эффективно работать на всей человеческой выборке, посему и в либеральных формах взаимодействия возникают способы организации и упорядочения человеческой жизни.</p>
+<blockquote class="blockquote">
+<p>Демократия утверждает высочайшую ценность каждого человека, социализм превращает человека в простое средство, в цифру. Демократия и социализм не имеют между собой ничего общего кроме одного слова: равенство. Но посмотрите, какая разница: если демократия стремится к равенству в свободе, то социализм – к равенству в рабстве и принуждении – де Токвиль.</p>
+</blockquote>
+<p>Тут надо оговориться, что вся соль в контексте, так, социализм сводится к рабству из-за того, что регуляторные функции там контролируются, а это потом начинает определять всю жизнь от работы до развлечений. Так вот, идея кажется слишком идеализированной, ведь в демократии равенство свободы при прочих равных факторах труда, а в социализме напрямую в труде, проблема в том, кто, как и почему будет определять этот труд.</p>
+<blockquote class="blockquote">
+<p>Планирование и конкуренция соединимы лишь на пути планирования во имя конкуренции, но не на пути планирования против конкуренции</p>
+</blockquote>
+<p>Опять оговорка – планирование тут это не просто прогноз для повышения прозрачности работы, а регуляторное планирование, т.е. Определение некоторого плана и требование его полного выполнения обществом. Тут прикол в том, что никакой социалист демона Лапласа не раздобудет, следовательно не сумеет спрогнозировать все потребности, что могут возникнуть в обществе, следовательно его план всегда будет ограничивающим.</p>
+<blockquote class="blockquote">
+<p>… но нельзя отрицать возможности путем принудительной стандартизации или запрета разнообразия достигать в некоторых областях изобилия, способного возместить отсутствие выбора. Можно даже предположить, что когда-нибудь будет сделано такое изобретение, которое принесет огромную выгоду обществу, но лишь при условии, если им будут одновременно пользоваться все или почти все</p>
+</blockquote>
+<p>Классическая история о том, что есть сферы или ситуации, когда контроль повышает локальную эффективность решения, но к этому простой контраргумент и опять со стороны планирования – раз контроллер не может знать глобальные оптимальные опции, то риск того, что принуждение близкой удачной опции вытеснит естественный путь становления еще более удачной – велик.</p>
+<blockquote class="blockquote">
+<p>Иллюзия специалистов, что плановое общество будет уделять больше сил достижению целей, которые его волнуют, – явление, допускающее и более широкое истолкование. Ведь все мы в чем-то заинтересованы, что-то предпочитаем и в этом смысле подобны специалисту. И мы наивно думаем, что наша личная иерархия ценностей имеет значение не только для нас и что в свободной дискуссии с разумными людьми мы сможем убедить их в справедливости наших воззрений.</p>
+</blockquote>
+<p>Суровая правда, об интересах индивида печется только индивид, harmful but true.</p>
+<blockquote class="blockquote">
+<p>Если в момент принятия закона известен его результат, такой закон уже не может являться инструментом, который свободный человек может использовать по своему усмотрению. Это инструмент, с помощью которого законодатель воздействует на людей, преследуя свои цели.</p>
+</blockquote>
+<p>Какой-то парадоксальный вывод, ведь принимать закон, не зная какие могут быть последствия – шиза, но прогнозировать последствия = рушить индивидуализм. Где-то по соседству в тексте Хаек описывать, что так-то законы могут быть, главное чтобы только о защите свободы и выполнении свободных контрактов пеклись, но как принимать хотя бы такие законы, не предполагая, к чему они будут приводить? Короче, приведенный тезис отношу к очень спорным, ведь законы, по-хорошему, должны быть системой для реализации общественной цели и развиваться с учетом обратной связи. Например хотим. Чтобы люди не воровали свободу других, придумываем как это можно описать в нпа, потом видим, что все пользуются лазейкой и цель не выполнена, адаптируем текст нпа и так по кругу.</p>
+<blockquote class="blockquote">
+<p>Человек свободен, если он должен подчиняться не другому человеку, но закону – Кант</p>
+</blockquote>
+<p>Звучит разумно. Можно разгонять в духе, а будет ли транзитивной связь создание закона – подчинение, т.е. логично ли сказать, что при подчинении закону мы на какую-то часть подчиняемся воле его создателя, если да, то как это чинить?</p>
+<blockquote class="blockquote">
+<p>Было бы правильнее видеть в деньгах величайший из когда-либо изобретенных человеком инструментов свободны. Именно деньги открывают теперь перед бедными гораздо большие возможности, чем несколько поколений назад были открыты перед богатыми</p>
+</blockquote>
+<p>Деньги и деньги, че бубнеть то. А если серьезно, то я скорее не понимаю описание оппозиции – челов, которые “ненавидят деньги, усматривая в них символ этих ограничений, налагаемый нашей относительной бедностью”. Во-первых, насколько это не преувеличение и настолько ярые и значимые критики денег существуют. Во-вторых, обе позиции странные, деньги просто инструмент, удобный способ договариваться о чем-либо.</p>
+<blockquote class="blockquote">
+<p>Планирование затронет не только наши те маргинальные нужды, которые мы обычно имеем в виду, говоря о “чистой экономике”. Дело в том, что нам как индивида мне будет позволено судить, что является для нас второстепенным.</p>
+</blockquote>
+<p>Ну собственно еще один пример того, что планирование не может учитывать разносторонние потребности, следовательно ни серого, ни, тем более, черного секторов экономики не будет, а доступные опции будут ограничены и проранжированы по социальной одобряемости.</p>
+<blockquote class="blockquote">
+<p>Когда людей лишают возможности свободно путешествовать, покупать иностранные журналы и книги, когда контакты с заграницей могут осуществляться только по инициативе или с одобрения официальных инстанций общественное мнение оказывается под гораздо более жестким контролем, чем были при любом абсолютистском режиме</p>
+</blockquote>
+<p>А как быть если ограничение вроде как внешнее, но там не все так однозначно…</p>
+<blockquote class="blockquote">
+<p>Те, кто в главном отказываются от свободы во имя временной безопасности, не заслуживают ни свободы ни безопасности – Б. Франклин.</p>
+</blockquote>
+<p>Согл.</p>
+<blockquote class="blockquote">
+<p>Всякая власть развращает, но абсолютная власть развращает абсолютно – Лорд Актон.</p>
+</blockquote>
+<p>Попосовые эксперименты по типу <a href="https://www.imdb.com/title/tt0420293/">Тюремный эксперимент в Стэнфорде</a> чуть ли не убеждают, что это то, как наш мозг устроен.</p>
+<blockquote class="blockquote">
+<p>Между тем непонятно, почему система должна обладать теми же достоинствами, что и побуждения, которые привели к её созданию</p>
+</blockquote>
+<p>Просто напоминание о том, что анализ результатов деятельности должен быть вне контекста автора деятельности, чтобы не пытаться приписать в какую-либо из сторон оценочные суждения.</p>
+<blockquote class="blockquote">
+<p>… самую многочисленную ценностно однородную группу составляют люди, моральный уровень которых невысок</p>
+</blockquote>
+<p>По собственному опыту сказать пока ничего не могу, но как мысль на подумать – занимательная. В целом, если мораль может быть проксирована каким-то образованием или чем-то в этом духе, то звучит логично, что чем выше развитость этого прокси, тем больше вариантов этого развития, тем разнообразнее индивиды.</p>
+<blockquote class="blockquote">
+<p>Современный человек все чаще склонен считать себя моральным, потому что он переносит свои пороки на все более и более обширные группы – Р. Нибур.</p>
+</blockquote>
+<p>Психология толпы, все дела. Занимательно, что актуальность проблемы все растет, т.к. сейчас порог входа во все новые группы ниже чем когда-либо.</p>
+<blockquote class="blockquote">
+<p>Одной из лучших гарантий мира станет такой международный орган, который будет ограничить власть государства над личностью.</p>
+</blockquote>
+<p>А кто будет ограничивать власть этого органа по контролю власти государства над личностью?</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-data
-</th>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
