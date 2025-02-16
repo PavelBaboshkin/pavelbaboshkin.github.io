@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "notes/work/index.html",
+    "href": "notes/work/index.html",
+    "title": "LLMs",
+    "section": "",
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "📚 Pablo science library",
+    "section": "",
+    "text": "This is a place where I share some of my notes. If you find an error, please submit a pull request. You can also get in touch with me here\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nLLMs\n\n\nNotes on LLMs\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Author",
@@ -7,17 +21,24 @@
     "text": "Я Паша, тут пишу"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "тут текст\n\n\n\n\n\n\n\n\n\n\n📚 Pablo science library\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLLMs\n\n\n\n\n\nNotes on LLMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n2/16/25\n\n\n\n\n\n\n\n\n\n\n\n\ntest With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n2/16/25\n\n\n\n\n\n\nNo matching items\n\n\nи тут текст"
+  },
+  {
+    "objectID": "notes/life/post-with-code/index.html",
+    "href": "notes/life/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog",
+    "objectID": "notes/work/example/test.html",
+    "href": "notes/work/example/test.html",
+    "title": "test With Code",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "import numpy as np"
   }
 ]

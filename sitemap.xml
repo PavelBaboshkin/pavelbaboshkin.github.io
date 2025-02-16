@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/work/index.html</loc>
+    <lastmod>2025-02-16T10:53:12.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/index.html</loc>
+    <lastmod>2025-02-16T10:54:24.429Z</lastmod>
+  </url>
+  <url>
     <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/about.html</loc>
     <lastmod>2025-02-16T10:33:13.894Z</lastmod>
   </url>
   <url>
-    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/posts/post-with-code/index.html</loc>
+    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/index.html</loc>
+    <lastmod>2025-02-16T11:06:50.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/life/post-with-code/index.html</loc>
     <lastmod>2025-02-16T10:33:45.728Z</lastmod>
   </url>
   <url>
-    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/index.html</loc>
-    <lastmod>2025-02-16T10:36:21.419Z</lastmod>
+    <loc>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/work/example/test.html</loc>
+    <lastmod>2025-02-16T11:06:27.157Z</lastmod>
   </url>
 </urlset>

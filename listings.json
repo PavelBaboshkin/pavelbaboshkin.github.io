@@ -1,8 +1,21 @@
 [
   {
+    "listing": "/notes/work/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/work/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html"
+      "/notes/index.html",
+      "/notes/work/index.html",
+      "/notes/life/post-with-code/index.html",
+      "/notes/work/example/test.html"
     ]
   }
 ]
