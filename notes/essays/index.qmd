@@ -1,0 +1,5 @@
+---
+title: Free essays
+description: Мысли на любую тему
+metadata-files: ["../_listing_meta.yml"]
+---

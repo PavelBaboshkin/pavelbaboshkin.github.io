@@ -1,0 +1,6 @@
+---
+id: cv
+title: Pavel Baboshkin CV
+---
+
+Резюме

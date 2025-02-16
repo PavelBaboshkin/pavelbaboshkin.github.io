@@ -1,5 +1,0 @@
----
-title: Book notes
-description: Заметки по прочитанным книгам
-metadata-files: ["../_listing_meta.yml"]
----

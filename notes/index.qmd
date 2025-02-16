@@ -7,9 +7,7 @@ margin-footer: <br>
 metadata-files: ["_listing_meta.yml"]
 listing:
   contents: 
-   - "/*.qmd"
-   - "../*.ipynb"
-   - '!../index.qmd'
+   - '*/index.qmd'
   feed: true
 ---
 

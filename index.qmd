@@ -1,19 +1,23 @@
 ---
 sidebar: false
-description: "A collection of technical blogs and talks on machine learning and data science."
+description: "Data Science/AI/Entrepreneurship"
 toc: true
 listing:
   date-format: short
-  feed: true
-  filter-ui: true
   type: table
+  page-size: 10
+  filter-ui: false
   sort-ui: false
-  sort: "date desc"
   categories: false
   fields: [date, title, description]
+  sort: "date desc"
   id: blog-listings
-  contents: [notes/*.qmd, notes/*.ipynb]
-aliases: ["blog/", "blog/posts/nbdev"]
+  contents:
+    - 'notes/**/*.[qmd, ipynb]'  # Включает все .qmd и .ipynb файлы
+    - 'notes/**/!(*index*).*'   # Исключает index файлы
+    - 'notes/**/!*.yml'   # Исключает yml файлы
+  feed: true
+aliases: ["blog/", ]
 format:
   html:
     anchor-sections: true
@@ -24,14 +28,20 @@ format:
 
 ![](resources/pablo.jpg){.profile-pic}
 
-I am a machine learning engineer with over 20 years of [experience](https://www.linkedin.com/in/hamelhusain/). I have worked with innovative companies such as Airbnb and GitHub, which included <a href="https://openai.com/index/introducing-text-and-code-embeddings#:~:text=models%20on%20the-,CodeSearchNet,),-evaluation%20suite%20where">early LLM research used by OpenAI</a>, for code understanding. I have also led and contributed to numerous popular [open-source machine-learning tools](oss/opensource.qmd). I am currently an independent consultant helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.
+Привет! Я Паша, учусь и работаю в области анализа данных. Немного поработал в Ozon и TBank, побольше поработал в Raiffeisen bank и Vkusvill, сейчас тружусь как Team Lead Data Analyst в Magnit. Сюда пишу содержательые заметки об аналитике, ИИ, учебе и проектах. Ежедневно вещаю в телеграм канале [Pablo science](https://t.me/PavelBaboshkin_channel)
 
 :::
 
+
 ## 💼 Work With Me
 
-Do you need help operationalizing AI and large language models? I’m open to new consulting work and other forms of advisory. If you need help with your project, you can find [**more information here**](https://parlance-labs.com/).
+Посмотреть резюме можно тут - [Pavel Baboshkin CV](/resources/cv.qmd)  
+Запросить консультацию можно в телеграмм - [Pavel Baboshkin](https://t.me/PavelBaboshkin)
 
+## 🗞️ Recent Posts
+
+Все заметки в структурированном виде рекомендую смотреть в разделе [notes](/notes/index.qmd)  
+В таблице видны последние посты: 
 
 ::: {#blog-listings}
 :::

@@ -5,18 +5,17 @@ exeucte:
   eval: false
 
 website:
-  title: "Pablo Blog"
+  title: "Pablo Science"
+  description: "Data Science/AI/Entrepreneurship"
   image: quarto.png
   google-analytics: "G-JJNXYRZ5C4"
   favicon: resources/favicon.png
   open-graph: true
-
-  description: "A collection of blogs and talks on machine learning and data science."
-
-  repo-url: https://github.com/hamelsmu/hamel-site
-  repo-actions: [edit]
-
   draft-mode: unlinked
+
+  site-url: https://pavelbaboshkin.github.io/
+  repo-url: https://github.com/PavelBaboshkin/pavelbaboshkin.github.io
+  # repo-actions: [edit]
 
   navbar:
     title: false
