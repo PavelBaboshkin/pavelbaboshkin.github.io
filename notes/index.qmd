@@ -9,6 +9,7 @@ listing:
   contents: 
    - "/*.qmd"
    - "/*/index.qmd"
+   - "/*.ipynb"
   feed: true
 ---
 

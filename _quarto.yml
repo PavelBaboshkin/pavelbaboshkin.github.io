@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+site:
+  favicon: "favicon.png"
 
 website:
   navbar:
