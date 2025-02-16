@@ -30,13 +30,8 @@
   {
     "listing": "/notes/index.html",
     "items": [
-      "/notes/books/Data for the People by Andreas Wiegend.html",
-      "/notes/books/Summa Technologiae by Stanislaw Lem.html",
-      "/notes/books/Agent of Influence by Janson Hanson.html",
-      "/notes/books/Games People Play by Eric Berne.html",
-      "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
-      "/notes/books/The Autobiography of Benjamin Franklin.html",
-      "/notes/books/How to see George Nelson.html"
+      "/notes/books/index.html",
+      "/notes/causal inference/index.html"
     ]
   }
 ]
