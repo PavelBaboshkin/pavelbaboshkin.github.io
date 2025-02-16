@@ -1,14 +1,46 @@
 [
   {
-    "objectID": "notes/work/index.html",
-    "href": "notes/work/index.html",
-    "title": "LLMs",
+    "objectID": "notes/causal inference/index.html",
+    "href": "notes/causal inference/index.html",
+    "title": "cusal inference cource",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
+    "text": "data\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Notes",
       "📚 Pablo science library",
-      "LLMs"
+      "cusal inference cource"
+    ]
+  },
+  {
+    "objectID": "notes/books/How to see George Nelson.html",
+    "href": "notes/books/How to see George Nelson.html",
+    "title": "How to see George Nelson",
+    "section": "",
+    "text": "Хоть я и не знаю как тут целостно что-либо записать в духе конспекта, но от книги я в восторге. Брал бумажную версию в хорошем варианте и внимательно рассматривал все иллюстрации – очень занимательно и дает пищу для воображения. Для себя хочу записать 2 типа вещей из прочитанного: размышления на тему визуального восприятия и структуру, в которой Нельсон предлагает развивать это восприятие, начну по порядку.",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library",
+      "Book notes",
+      "How to see George Nelson"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "тут текст\n\n\n\n\n\n\n\n\n\n\nBook notes\n\n\n\n\n\nЗаметки по прочитанным книгам\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n📚 Pablo science library\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncusal inference cource\n\n\n\n\n\nописание\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to see George Nelson\n\n\n\n\n\n\nnews\n\n\n\nОписание\n\n\n\n\n\n10/22/24\n\n\n\n\n\n\nNo matching items\n\n\nи тут текст"
+  },
+  {
+    "objectID": "notes/books/index.html",
+    "href": "notes/books/index.html",
+    "title": "Book notes",
+    "section": "",
+    "text": "data\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n \n\n\nHow to see George Nelson\n\n\nОписание\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library",
+      "Book notes"
     ]
   },
   {
@@ -16,51 +48,10 @@
     "href": "notes/index.html",
     "title": "📚 Pablo science library",
     "section": "",
-    "text": "Тут размещаю свои заметки\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nLLMs\n\n\nNotes on LLMs\n\n\n\n\n\nNo matching items",
+    "text": "Тут размещаю свои заметки\n\n\n\n\n\n\n\n\n\ndata\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n \n\n\nBook notes\n\n\nЗаметки по прочитанным книгам\n\n\n\n\n \n\n\ncusal inference cource\n\n\nописание\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Notes",
       "📚 Pablo science library"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Author",
-    "section": "",
-    "text": "Я Паша, тут пишу"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "тут текст\n\n\n\n\n\n\n\n\n\n\n📚 Pablo science library\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLLMs\n\n\n\n\n\nNotes on LLMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n2/16/25\n\n\n\n\n\n\n\n\n\n\n\n\ntest With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n2/16/25\n\n\n\n\n\n\nNo matching items\n\n\nи тут текст"
-  },
-  {
-    "objectID": "notes/life/post-with-code/index.html",
-    "href": "notes/life/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.",
-    "crumbs": [
-      "Notes",
-      "📚 Pablo science library",
-      "Life",
-      "Post With Code"
-    ]
-  },
-  {
-    "objectID": "notes/work/example/test.html",
-    "href": "notes/work/example/test.html",
-    "title": "test With Code",
-    "section": "",
-    "text": "import numpy as np",
-    "crumbs": [
-      "Notes",
-      "📚 Pablo science library",
-      "LLMs",
-      "Example",
-      "test With Code"
     ]
   }
 ]

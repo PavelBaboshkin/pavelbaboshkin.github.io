@@ -1,21 +1,28 @@
 [
   {
-    "listing": "/notes/work/index.html",
+    "listing": "/notes/causal inference/index.html",
     "items": []
-  },
-  {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/work/index.html"
-    ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/notes/books/index.html",
       "/notes/index.html",
-      "/notes/work/index.html",
-      "/notes/life/post-with-code/index.html",
-      "/notes/work/example/test.html"
+      "/notes/causal inference/index.html",
+      "/notes/books/How to see George Nelson.html"
+    ]
+  },
+  {
+    "listing": "/notes/books/index.html",
+    "items": [
+      "/notes/books/How to see George Nelson.html"
+    ]
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/books/index.html",
+      "/notes/causal inference/index.html"
     ]
   }
 ]
