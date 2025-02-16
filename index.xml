@@ -67,27 +67,22 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>)</span>
-<span id="cb2-2">API_KEY <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"sk-K8DHe2oIa1VDp2UOQ5f7QtK0sl08Y0jm"</span></span>
-<span id="cb2-3">client <span class="op" style="color: #5E5E5E;
+<span id="cb2-2">client <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> OpenAI(</span>
-<span id="cb2-4">    api_key<span class="op" style="color: #5E5E5E;
+<span id="cb2-3">    api_key<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>API_KEY, <span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span>os.environ.get(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">#os.environ.get("OPEN_AI_API_KEY"),</span></span>
-<span id="cb2-5">    base_url<span class="op" style="color: #5E5E5E;
+font-style: inherit;">"OPEN_AI_API_KEY"</span>),</span>
+<span id="cb2-4">    base_url<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"https://api.proxyapi.ru/openai/v1"</span>, <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#это провайдер прокси для многих моделек в РФ</span></span>
-<span id="cb2-6">)</span></code></pre></div>
+<span id="cb2-5">)</span></code></pre></div>
 </div>
 <div id="cell-4" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="cf" style="color: #003B4F;
