@@ -6,12 +6,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/notes/books/How to see George Nelson.html"
+      "/notes/books/How to see George Nelson.html",
+      "/notes/books/The Autobiography of Benjamin Franklin.html"
     ]
   },
   {
     "listing": "/notes/books/index.html",
     "items": [
+      "/notes/books/The Autobiography of Benjamin Franklin.html",
       "/notes/books/How to see George Nelson.html"
     ]
   },
