@@ -4,14 +4,23 @@
     "href": "notes/work/index.html",
     "title": "LLMs",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library",
+      "LLMs"
+    ]
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "📚 Pablo science library",
     "section": "",
-    "text": "This is a place where I share some of my notes. If you find an error, please submit a pull request. You can also get in touch with me here\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nLLMs\n\n\nNotes on LLMs\n\n\n\n\n\nNo matching items"
+    "text": "Тут размещаю свои заметки\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nLLMs\n\n\nNotes on LLMs\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library"
+    ]
   },
   {
     "objectID": "about.html",
@@ -32,13 +41,26 @@
     "href": "notes/life/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This is a post with executable code.",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library",
+      "Life",
+      "Post With Code"
+    ]
   },
   {
     "objectID": "notes/work/example/test.html",
     "href": "notes/work/example/test.html",
     "title": "test With Code",
     "section": "",
-    "text": "import numpy as np"
+    "text": "import numpy as np",
+    "crumbs": [
+      "Notes",
+      "📚 Pablo science library",
+      "LLMs",
+      "Example",
+      "test With Code"
+    ]
   }
 ]
