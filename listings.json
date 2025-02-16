@@ -3,12 +3,14 @@
     "listing": "/notes/index.html",
     "items": [
       "/notes/books/index.html",
-      "/notes/essays/index.html"
+      "/notes/essays/index.html",
+      "/notes/research/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/notes/research/ChatGPT random generator.html",
       "/notes/books/How to see George Nelson.html",
       "/notes/books/The Autobiography of Benjamin Franklin.html",
       "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
@@ -17,6 +19,12 @@
       "/notes/essays/History of AB testing.html",
       "/notes/books/Summa Technologiae by Stanislaw Lem.html",
       "/notes/books/Data for the People by Andreas Wiegend.html"
+    ]
+  },
+  {
+    "listing": "/notes/research/index.html",
+    "items": [
+      "/notes/research/ChatGPT random generator.html"
     ]
   },
   {

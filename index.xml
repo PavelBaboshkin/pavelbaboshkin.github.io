@@ -15,7 +15,947 @@
 <link>https://pavelbaboshkin.github.io/</link>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Wed, 14 Aug 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 15 Feb 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>ChatGPT random generator</title>
+  <link>https://pavelbaboshkin.github.io/notes/research/ChatGPT random generator.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Просто из интереса хочется проверить насколько случайные числа будет генерировать chat GPT если его об этом попросить</p>
+<p>Самый простой способ - просить имитировтаь подбрасывание монетки</p>
+<div id="cell-2" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> openai <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> OpenAI</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd </span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> asyncio</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> aiohttp</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> tqdm <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> tqdm</span>
+<span id="cb1-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> os</span></code></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">TEMPERATURES <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb2-2">API_KEY <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sk-K8DHe2oIa1VDp2UOQ5f7QtK0sl08Y0jm"</span></span>
+<span id="cb2-3">client <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> OpenAI(</span>
+<span id="cb2-4">    api_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>API_KEY, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#os.environ.get("OPEN_AI_API_KEY"),</span></span>
+<span id="cb2-5">    base_url<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.proxyapi.ru/openai/v1"</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#это провайдер прокси для многих моделек в РФ</span></span>
+<span id="cb2-6">)</span></code></pre></div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">async</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> fetch(prompt, temperature):</span>
+<span id="cb3-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">async</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">with</span> aiohttp.ClientSession() <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> session:</span>
+<span id="cb3-3">        completion <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> client.chat.completions.create(</span>
+<span id="cb3-4">                            model<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
+<span id="cb3-5">                            messages<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[</span>
+<span id="cb3-6">                                {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"system"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Ты имитируешь игру в Орел или Решка, отвечай только буквами О или Р"</span>},</span>
+<span id="cb3-7">                                {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span>: prompt }], </span>
+<span id="cb3-8">        temperature<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>temperature,)       </span>
+<span id="cb3-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> completion.choices[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].message.content</span></code></pre></div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">async</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> test(prompt, temp, trials):</span>
+<span id="cb4-2">    results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">await</span> asyncio.gather(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>(fetch(prompt, temp) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> _ <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(trials)))</span>
+<span id="cb4-3">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> results</span></code></pre></div>
+</div>
+<section id="групповая-генерация" class="level2">
+<h2 class="anchored" data-anchor-id="групповая-генерация">Групповая генерация</h2>
+<p>Просим в одном промпте подбросить монетку 100 раз и выдать результаты</p>
+<div id="cell-7" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">trials <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># по 5 раз перезапускаем результат на одинаковой температуре</span></span>
+<span id="cb5-2">group_results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb5-3"></span>
+<span id="cb5-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> temperature <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> tqdm(TEMPERATURES):</span>
+<span id="cb5-5">    res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">await</span> test(</span>
+<span id="cb5-6">        prompt<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Подбрось монетку 100 раз и перечисли результаты подбрасывания через запятую"</span>, </span>
+<span id="cb5-7">        temp<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>temperature, </span>
+<span id="cb5-8">        trials<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>trials, </span>
+<span id="cb5-9">    )</span>
+<span id="cb5-10">    group_results.append(res)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>100%|██████████| 10/10 [08:16&lt;00:00, 49.60s/it]</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">group_results_metrics <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb7-2">columns <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb7-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"trial"</span>, </span>
+<span id="cb7-4">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"temperature"</span>, </span>
+<span id="cb7-5">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"answer_len"</span>, </span>
+<span id="cb7-6">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"norm_answers_len"</span>, </span>
+<span id="cb7-7">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"o_share"</span>, </span>
+<span id="cb7-8">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p_share"</span>, </span>
+<span id="cb7-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"trash_share"</span>, </span>
+<span id="cb7-10">]</span>
+<span id="cb7-11"></span>
+<span id="cb7-12"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> idx, trial <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(group_results):</span>
+<span id="cb7-13">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> series <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> trial: </span>
+<span id="cb7-14">        res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> series.upper().split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">','</span>)</span>
+<span id="cb7-15">        </span>
+<span id="cb7-16">        counts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'trash'</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>}</span>
+<span id="cb7-17">        </span>
+<span id="cb7-18">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> token <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> res:</span>
+<span id="cb7-19">            token <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> token.strip()</span>
+<span id="cb7-20">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> token <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'О'</span>,}:</span>
+<span id="cb7-21">                counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb7-22">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">elif</span> token <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Р'</span>,}:</span>
+<span id="cb7-23">                counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb7-24">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb7-25">                counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'trash'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb7-26">        </span>
+<span id="cb7-27">        res_len <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(res)     </span>
+<span id="cb7-28">        norm_len <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>]</span>
+<span id="cb7-29">        </span>
+<span id="cb7-30">        group_results_metrics.append([</span>
+<span id="cb7-31">            idx, </span>
+<span id="cb7-32">            TEMPERATURES[idx], </span>
+<span id="cb7-33">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(res), </span>
+<span id="cb7-34">            norm_len, </span>
+<span id="cb7-35">            counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> norm_len <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> norm_len <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, </span>
+<span id="cb7-36">            counts[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> norm_len <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> norm_len <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, </span>
+<span id="cb7-37">            <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> norm_len<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>res_len,   </span>
+<span id="cb7-38">        ])</span>
+<span id="cb7-39">        </span></code></pre></div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">pd.DataFrame(group_results_metrics, columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>columns)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="89">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">trial</th>
+<th data-quarto-table-cell-role="th">temperature</th>
+<th data-quarto-table-cell-role="th">answer_len</th>
+<th data-quarto-table-cell-role="th">norm_answers_len</th>
+<th data-quarto-table-cell-role="th">o_share</th>
+<th data-quarto-table-cell-role="th">p_share</th>
+<th data-quarto-table-cell-role="th">trash_share</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>109</td>
+<td>109</td>
+<td>0.522936</td>
+<td>0.477064</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0</td>
+<td>0.000000</td>
+<td>2049</td>
+<td>2048</td>
+<td>0.600098</td>
+<td>0.399902</td>
+<td>0.000488</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0</td>
+<td>0.000000</td>
+<td>208</td>
+<td>208</td>
+<td>0.504808</td>
+<td>0.495192</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0</td>
+<td>0.000000</td>
+<td>106</td>
+<td>106</td>
+<td>0.509434</td>
+<td>0.490566</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0</td>
+<td>0.000000</td>
+<td>2049</td>
+<td>2048</td>
+<td>0.600098</td>
+<td>0.399902</td>
+<td>0.000488</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>1</td>
+<td>0.222222</td>
+<td>113</td>
+<td>113</td>
+<td>0.610619</td>
+<td>0.389381</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>1</td>
+<td>0.222222</td>
+<td>100</td>
+<td>100</td>
+<td>0.510000</td>
+<td>0.490000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>1</td>
+<td>0.222222</td>
+<td>116</td>
+<td>116</td>
+<td>0.517241</td>
+<td>0.482759</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>1</td>
+<td>0.222222</td>
+<td>108</td>
+<td>108</td>
+<td>0.518519</td>
+<td>0.481481</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>1</td>
+<td>0.222222</td>
+<td>107</td>
+<td>107</td>
+<td>0.514019</td>
+<td>0.485981</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2</td>
+<td>0.444444</td>
+<td>109</td>
+<td>109</td>
+<td>0.477064</td>
+<td>0.522936</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>2</td>
+<td>0.444444</td>
+<td>104</td>
+<td>104</td>
+<td>0.519231</td>
+<td>0.480769</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>2</td>
+<td>0.444444</td>
+<td>112</td>
+<td>112</td>
+<td>0.553571</td>
+<td>0.446429</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>2</td>
+<td>0.444444</td>
+<td>102</td>
+<td>102</td>
+<td>0.519608</td>
+<td>0.480392</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>2</td>
+<td>0.444444</td>
+<td>109</td>
+<td>109</td>
+<td>0.486239</td>
+<td>0.513761</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.523810</td>
+<td>0.476190</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>3</td>
+<td>0.666667</td>
+<td>104</td>
+<td>104</td>
+<td>0.548077</td>
+<td>0.451923</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>3</td>
+<td>0.666667</td>
+<td>113</td>
+<td>113</td>
+<td>0.486726</td>
+<td>0.513274</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.504762</td>
+<td>0.495238</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.495238</td>
+<td>0.504762</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>4</td>
+<td>0.888889</td>
+<td>94</td>
+<td>94</td>
+<td>0.521277</td>
+<td>0.478723</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>4</td>
+<td>0.888889</td>
+<td>103</td>
+<td>103</td>
+<td>0.553398</td>
+<td>0.446602</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>4</td>
+<td>0.888889</td>
+<td>99</td>
+<td>99</td>
+<td>0.515152</td>
+<td>0.484848</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>4</td>
+<td>0.888889</td>
+<td>102</td>
+<td>102</td>
+<td>0.509804</td>
+<td>0.490196</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>4</td>
+<td>0.888889</td>
+<td>95</td>
+<td>95</td>
+<td>0.515789</td>
+<td>0.484211</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>5</td>
+<td>1.111111</td>
+<td>103</td>
+<td>103</td>
+<td>0.475728</td>
+<td>0.524272</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">26</td>
+<td>5</td>
+<td>1.111111</td>
+<td>100</td>
+<td>100</td>
+<td>0.490000</td>
+<td>0.510000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">27</td>
+<td>5</td>
+<td>1.111111</td>
+<td>108</td>
+<td>108</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>5</td>
+<td>1.111111</td>
+<td>103</td>
+<td>103</td>
+<td>0.475728</td>
+<td>0.524272</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">29</td>
+<td>5</td>
+<td>1.111111</td>
+<td>102</td>
+<td>102</td>
+<td>0.529412</td>
+<td>0.470588</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">30</td>
+<td>6</td>
+<td>1.333333</td>
+<td>99</td>
+<td>95</td>
+<td>0.494737</td>
+<td>0.505263</td>
+<td>0.040404</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">31</td>
+<td>6</td>
+<td>1.333333</td>
+<td>102</td>
+<td>102</td>
+<td>0.480392</td>
+<td>0.519608</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>6</td>
+<td>1.333333</td>
+<td>98</td>
+<td>98</td>
+<td>0.520408</td>
+<td>0.479592</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">33</td>
+<td>6</td>
+<td>1.333333</td>
+<td>104</td>
+<td>104</td>
+<td>0.490385</td>
+<td>0.509615</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">34</td>
+<td>6</td>
+<td>1.333333</td>
+<td>92</td>
+<td>85</td>
+<td>0.541176</td>
+<td>0.458824</td>
+<td>0.076087</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">35</td>
+<td>7</td>
+<td>1.555556</td>
+<td>100</td>
+<td>100</td>
+<td>0.500000</td>
+<td>0.500000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>7</td>
+<td>1.555556</td>
+<td>101</td>
+<td>100</td>
+<td>0.550000</td>
+<td>0.450000</td>
+<td>0.009901</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">37</td>
+<td>7</td>
+<td>1.555556</td>
+<td>105</td>
+<td>98</td>
+<td>0.540816</td>
+<td>0.459184</td>
+<td>0.066667</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">38</td>
+<td>7</td>
+<td>1.555556</td>
+<td>40</td>
+<td>39</td>
+<td>0.615385</td>
+<td>0.384615</td>
+<td>0.025000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">39</td>
+<td>7</td>
+<td>1.555556</td>
+<td>38</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">40</td>
+<td>8</td>
+<td>1.777778</td>
+<td>47</td>
+<td>46</td>
+<td>0.695652</td>
+<td>0.304348</td>
+<td>0.021277</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">41</td>
+<td>8</td>
+<td>1.777778</td>
+<td>30</td>
+<td>9</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.700000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">42</td>
+<td>8</td>
+<td>1.777778</td>
+<td>10</td>
+<td>9</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.100000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">43</td>
+<td>8</td>
+<td>1.777778</td>
+<td>102</td>
+<td>85</td>
+<td>0.529412</td>
+<td>0.470588</td>
+<td>0.166667</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">44</td>
+<td>8</td>
+<td>1.777778</td>
+<td>118</td>
+<td>65</td>
+<td>0.507692</td>
+<td>0.492308</td>
+<td>0.449153</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>9</td>
+<td>2.000000</td>
+<td>52</td>
+<td>5</td>
+<td>0.600000</td>
+<td>0.400000</td>
+<td>0.903846</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">46</td>
+<td>9</td>
+<td>2.000000</td>
+<td>35</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">47</td>
+<td>9</td>
+<td>2.000000</td>
+<td>89</td>
+<td>48</td>
+<td>0.520833</td>
+<td>0.479167</td>
+<td>0.460674</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">48</td>
+<td>9</td>
+<td>2.000000</td>
+<td>27</td>
+<td>1</td>
+<td>1.000000</td>
+<td>0.000000</td>
+<td>0.962963</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">49</td>
+<td>9</td>
+<td>2.000000</td>
+<td>48</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="разовая-генерация" class="level2">
+<h2 class="anchored" data-anchor-id="разовая-генерация">Разовая генерация</h2>
+<p>Просим по очереди генерировать все новые результаты, в духе<br>
+User &gt;&gt;&gt; Подбрось монетку<br>
+Chat &gt;&gt;&gt; O<br>
+User &gt;&gt;&gt; Подбрось монетку<br>
+Chat &gt;&gt;&gt; P<br>
+….</p>
+<p>TBA</p>
+
+
+</section>
+
+ ]]></description>
+  <category>research</category>
+  <guid>https://pavelbaboshkin.github.io/notes/research/ChatGPT random generator.html</guid>
+  <pubDate>Sat, 15 Feb 2025 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How to see George Nelson</title>
   <link>https://pavelbaboshkin.github.io/notes/books/How to see George Nelson.html</link>

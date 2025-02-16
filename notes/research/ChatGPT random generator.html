@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-08-12">
-<meta name="description" content="Автобиография одного из самых влиятельных людей в XVIII века">
+<meta name="dcterms.date" content="2025-02-16">
+<meta name="description" content="Насколько хорошо GPT генерирует случайные числа">
 
-<title>The Autobiography of Benjamin Franklin – Pablo Science</title>
+<title>ChatGPT random generator – Pablo Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,10 +22,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -79,12 +113,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../resources/styles.css">
-<meta property="og:title" content="The Autobiography of Benjamin Franklin – Pablo Science">
-<meta property="og:description" content="Автобиография одного из самых влиятельных людей в XVIII века">
-<meta property="og:image" content="https://pavelbaboshkin.github.io/notes/books/quarto.png">
+<meta property="og:title" content="ChatGPT random generator – Pablo Science">
+<meta property="og:description" content="Насколько хорошо GPT генерирует случайные числа">
+<meta property="og:image" content="https://pavelbaboshkin.github.io/notes/research/quarto.png">
 <meta property="og:site_name" content="Pablo Science">
 </head>
 
@@ -120,7 +157,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Book notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Autobiography of Benjamin Franklin.html">The Autobiography of Benjamin Franklin</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/research/index.html">Free research</a></li><li class="breadcrumb-item"><a href="../../notes/research/ChatGPT random generator.html">ChatGPT random generator</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -145,14 +182,14 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../../notes/research/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Free research</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/research/ChatGPT random generator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/research/ChatGPT random generator.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ChatGPT random generator</span></a>
   </div>
 </li>
@@ -179,11 +216,11 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../../notes/books/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Book notes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/books/Agent of Influence by Janson Hanson.html" class="sidebar-item-text sidebar-link">
@@ -216,7 +253,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/The Autobiography of Benjamin Franklin.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notes/books/The Autobiography of Benjamin Franklin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Autobiography of Benjamin Franklin</span></a>
   </div>
 </li>
@@ -235,23 +272,30 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#групповая-генерация" id="toc-групповая-генерация" class="nav-link active" data-scroll-target="#групповая-генерация">Групповая генерация</a></li>
+  <li><a href="#разовая-генерация" id="toc-разовая-генерация" class="nav-link" data-scroll-target="#разовая-генерация">Разовая генерация</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Book notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Autobiography of Benjamin Franklin.html">The Autobiography of Benjamin Franklin</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/research/index.html">Free research</a></li><li class="breadcrumb-item"><a href="../../notes/research/ChatGPT random generator.html">ChatGPT random generator</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Autobiography of Benjamin Franklin</h1>
+<h1 class="title">ChatGPT random generator</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">books</div>
+    <div class="quarto-category">research</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Автобиография одного из самых влиятельных людей в XVIII века
+    Насколько хорошо GPT генерирует случайные числа
   </div>
 </div>
 
@@ -262,7 +306,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 12, 2024</p>
+      <p class="date">February 16, 2025</p>
     </div>
   </div>
   
@@ -274,58 +318,639 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </header>
 
 
-<p>Бенджамин Франклин – человек, который сам, с помощью упорной работы и следования своим принципам стал одним из самых влиятельных людей своего века. Его автобиография мне показалась двойственной. С одной стороны, похоже на попытку подробно описать интересные события из своей жизни, а с другой – рефлексия уже очень взрослого человека о том, как и почему он смог прийти к тому, что имеет.</p>
-<p>Вот сторона с анализом причин меня наиболее и заинтересовала. Если коротко, то все дело в том, чтобы быть честным и трудолюбивым, поставить себе цели и неотступно следовать им. Более подробное раскрытие темы приведу в формате выдержек и комментариев.</p>
-<blockquote class="blockquote">
-<p>…Зато писание прозы весьма пригодилось мне и помогло продвинуться в жизни</p>
-</blockquote>
-<p>Это скоре контекстная фраза к тому, что Франклин считал навык письма очень важным в жизни. Даже предлагает свою методу его развития – записывать по памяти прочитанные произведения, причем не просто стараясь запоминать, а развивая идеи в том же духе, как это делал автор и пытаясь подбирать лучшие слова и выражения для этого.</p>
-<blockquote class="blockquote">
-<p>Когда у человека мало денег, он бывает щедрее, нежели когда имеет их много, – поэтому, возможно, что боится, как бы его не приняли за бедняка.</p>
-</blockquote>
-<p>Для себя так и не решил можно ли однозначно отнести описанное явление к положительному ил инегативному. С одной стороны, логично при низком бюджете активнее сберегать, дабы бюджет рос. Но с другой стороны, в такой ситуации требуется не постепенный, а скачкообразный рост, который возможен при бОльшем риске, а следовательно и тратах.</p>
-<blockquote class="blockquote">
-<p>Разум всегда подскажет оправдания для любого поступка, который нам хочется совершить</p>
-</blockquote>
-<p>Посему надо уметь распознавать истинные желания своей личности от мимолетных облегчающих подсказок от разума, которые жертвуют желаемым ради простоты существования.</p>
-<blockquote class="blockquote">
-<p>Это тоже было одной из серьезных ошибок в моей жизни</p>
-</blockquote>
-<p>Не информативная по тексту фраза, но важная для смысла. Так, Франклин несколько раз указывал на какие-то свои глобальные промахи в работе и отношениях с людьми. Отсюда два главных вывода: как минимум, надо рефлексировать и искать события/действия наиболее нас формирующие, а вообще полезно еще и стараться исправить негативные поступки, сколь бы давними они ни были.</p>
-<blockquote class="blockquote">
-<ol type="1">
-<li>Мне необходимо соблюдать крайнюю бережливость – некоторое время, пока я не расплачусь со своими долгами</li>
-<li>Стремиться неизменного говорить правду, ни в коого не вселяя надежд, кои едва ли смогу оправдать, но быть искренним в каждом моем слове и поступке</li>
-<li>Прилежно заниматься любым делом, за какое возьмусь, не отвлекаясь от него легкомысленной погоне за быстрым обогащению, ибо вернейший путь к преуспению лежит через трудолюбие и терпение</li>
-<li>Я обязуюсь ни о ком не отзываться дурно, даже с целью установить истину, но искать оправданий для поступок, в которых обвиняют людей, и пользоваться всяким случаем, чтобы говорить о человеке все то доброе, что я о нем знаю.</li>
-</ol>
-</blockquote>
-<p>То о чем писал в начале, простые принципы, которые надо себе составлять для достижения нового. Конкретно эти были описаны в контексте, когда молодой Франклин вернулся из Лондона в Филадельфию и вступил в новый этап своей жизни.</p>
-<blockquote class="blockquote">
-<p>Я пришел к убеждению, что главные условия для счастья в жизни – это правдивость, искренность и честность в отношениях между людьми;</p>
-</blockquote>
-<p>Думаю не стоит 1 в 1 принимать чужой вывод об условиях для счастья, но как минимум попробовать сформулировать свои – может быть полезно.</p>
-<blockquote class="blockquote">
-<p>… невыгодно называть себя застрельщиком любого полезного начинания, ведь его сразу заподозрят в том, что он ставит себя хоть немножечко да выше людей, его окружающих</p>
-</blockquote>
-<p>Совет из области деловых лайфхаков, которые, как минимум, стоит попробовать. Суть в том, что если надо продать какую-то свою идею представляете её как коллективную, в которой вы лишь представитель.</p>
-<blockquote class="blockquote">
-<p>[о пасторе]… он не призывал к соблюдению каких-либо нравственных правил и, казалось, старался сделать нас не достойными гражданами, а всего лишь пресвитерианами.</p>
-</blockquote>
-<p>Кажется это полезно помнить в любой сфере, где один человек выполняет функцию учения для других – религия, преподавание, наставничество и т.п. Главное в таких вопросах – глубинное содержание, а не форма.</p>
-<p>Франклин предлагает свою систему по выработке привычек, которые он считал наиболее важными, а именно: Воздержанность, Молчаливость, Аккуратность, Решительность, Бережливость, Трудолюбие, Искренность, Справедливость, Умеренность, Чистоплотность, Спокойствие, Целомудрие, Кротость</p>
-<p>Подробнее об этом уже много где хорошо написали, <a href="https://vc.ru/u/2230579-kirill-david-razvit-biznes/885986-metod-franklina-sekret-effektivnogo-formirovaniya-privychek">например</a></p>
-<blockquote class="blockquote">
-<p>Тот, кто один раз оказал тебе услугу, скорее окажет тебе и другую, нежели тот, кому ты сам услужил</p>
-</blockquote>
-<p>Такой психологический эффект даже стал называться <a href="https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%91%D0%B5%D0%BD%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BD%D0%B0_%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD%D0%B0#:~:text=%D0%94%D1%80%D1%83%D0%B3%D0%B8%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8%2C%20%C2%AB%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%20%D0%91%D0%B5%D0%BD%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BD%D0%B0%20%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD%D0%B0,%2C%20%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D1%83%D1%8E%D1%82%D1%81%D1%8F%2C%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%82%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F%C2%BB.">эффектом Бенджамина Франклина</a>. Забавно, что у него есть и обратный, когда мы начинаем ненавидеть того, кому причинили зло, дабы оправдать в своих глазах этот поступок.</p>
-<blockquote class="blockquote">
-<p>Советую вам в первую очередь обратиться к тем, в чьей поддержке вы уверены; потом к тем, в которых вы сомневаетесь дадут ли они что-нибудь или нет, и показывайте им список тех, кто уже что-то дал; и, наконец, не пренебрегайте и теми, от которых никаких не ждете поддержки ибо в отношении некоторых из них вы могли ошибаться.</p>
-</blockquote>
-<p>Чисто гайд по фандрайзу.</p>
-<p>Штош, “время-деньги” освоена, чтиво занимательное, на 100 долларов мимоходом не попасть.</p>
+<p>Просто из интереса хочется проверить насколько случайные числа будет генерировать chat GPT если его об этом попросить</p>
+<p>Самый простой способ - просить имитировтаь подбрасывание монетки</p>
+<div id="cell-2" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> aiohttp</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>TEMPERATURES <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> <span class="st">"sk-K8DHe2oIa1VDp2UOQ5f7QtK0sl08Y0jm"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    api_key<span class="op">=</span>API_KEY, <span class="co">#os.environ.get("OPEN_AI_API_KEY"),</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    base_url<span class="op">=</span><span class="st">"https://api.proxyapi.ru/openai/v1"</span>, <span class="co">#это провайдер прокси для многих моделек в РФ</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> fetch(prompt, temperature):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">async</span> <span class="cf">with</span> aiohttp.ClientSession() <span class="im">as</span> session:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        completion <span class="op">=</span> client.chat.completions.create(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                            model<span class="op">=</span><span class="st">"gpt-3.5-turbo"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                            messages<span class="op">=</span>[</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                                {<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: <span class="st">"Ты имитируешь игру в Орел или Решка, отвечай только буквами О или Р"</span>},</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                                {<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt }], </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        temperature<span class="op">=</span>temperature,)       </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> completion.choices[<span class="dv">0</span>].message.content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> test(prompt, temp, trials):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> <span class="cf">await</span> asyncio.gather(<span class="op">*</span>(fetch(prompt, temp) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(trials)))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="групповая-генерация" class="level2">
+<h2 class="anchored" data-anchor-id="групповая-генерация">Групповая генерация</h2>
+<p>Просим в одном промпте подбросить монетку 100 раз и выдать результаты</p>
+<div id="cell-7" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> <span class="dv">5</span> <span class="co"># по 5 раз перезапускаем результат на одинаковой температуре</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>group_results <span class="op">=</span> []</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> temperature <span class="kw">in</span> tqdm(TEMPERATURES):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> <span class="cf">await</span> test(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        prompt<span class="op">=</span><span class="st">"Подбрось монетку 100 раз и перечисли результаты подбрасывания через запятую"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        temp<span class="op">=</span>temperature, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        trials<span class="op">=</span>trials, </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    group_results.append(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>100%|██████████| 10/10 [08:16&lt;00:00, 49.60s/it]</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>group_results_metrics <span class="op">=</span> []</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> [</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trial"</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"temperature"</span>, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"answer_len"</span>, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"norm_answers_len"</span>, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"o_share"</span>, </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"p_share"</span>, </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trash_share"</span>, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, trial <span class="kw">in</span> <span class="bu">enumerate</span>(group_results):</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> series <span class="kw">in</span> trial: </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        res <span class="op">=</span> series.upper().split(<span class="st">','</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        counts <span class="op">=</span> {<span class="st">'O'</span>:<span class="dv">0</span>, <span class="st">'P'</span>:<span class="dv">0</span>, <span class="st">'trash'</span>:<span class="dv">0</span>}</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> token <span class="kw">in</span> res:</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>            token <span class="op">=</span> token.strip()</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> token <span class="kw">in</span> {<span class="st">'O'</span>, <span class="st">'О'</span>,}:</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                counts[<span class="st">'O'</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> token <span class="kw">in</span> {<span class="st">'P'</span>, <span class="st">'Р'</span>,}:</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                counts[<span class="st">'P'</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>                counts[<span class="st">'trash'</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        res_len <span class="op">=</span> <span class="bu">len</span>(res)     </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        norm_len <span class="op">=</span> counts[<span class="st">'O'</span>] <span class="op">+</span> counts[<span class="st">'P'</span>]</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        group_results_metrics.append([</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>            idx, </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            TEMPERATURES[idx], </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>            <span class="bu">len</span>(res), </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            norm_len, </span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>            counts[<span class="st">'O'</span>] <span class="op">/</span> norm_len <span class="cf">if</span> norm_len <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span>, </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            counts[<span class="st">'P'</span>] <span class="op">/</span> norm_len <span class="cf">if</span> norm_len <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span>, </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>            <span class="dv">1</span> <span class="op">-</span> norm_len<span class="op">/</span>res_len,   </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        ])</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(group_results_metrics, columns<span class="op">=</span>columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="89">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">trial</th>
+<th data-quarto-table-cell-role="th">temperature</th>
+<th data-quarto-table-cell-role="th">answer_len</th>
+<th data-quarto-table-cell-role="th">norm_answers_len</th>
+<th data-quarto-table-cell-role="th">o_share</th>
+<th data-quarto-table-cell-role="th">p_share</th>
+<th data-quarto-table-cell-role="th">trash_share</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>109</td>
+<td>109</td>
+<td>0.522936</td>
+<td>0.477064</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0</td>
+<td>0.000000</td>
+<td>2049</td>
+<td>2048</td>
+<td>0.600098</td>
+<td>0.399902</td>
+<td>0.000488</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0</td>
+<td>0.000000</td>
+<td>208</td>
+<td>208</td>
+<td>0.504808</td>
+<td>0.495192</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0</td>
+<td>0.000000</td>
+<td>106</td>
+<td>106</td>
+<td>0.509434</td>
+<td>0.490566</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0</td>
+<td>0.000000</td>
+<td>2049</td>
+<td>2048</td>
+<td>0.600098</td>
+<td>0.399902</td>
+<td>0.000488</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>1</td>
+<td>0.222222</td>
+<td>113</td>
+<td>113</td>
+<td>0.610619</td>
+<td>0.389381</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>1</td>
+<td>0.222222</td>
+<td>100</td>
+<td>100</td>
+<td>0.510000</td>
+<td>0.490000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>1</td>
+<td>0.222222</td>
+<td>116</td>
+<td>116</td>
+<td>0.517241</td>
+<td>0.482759</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>1</td>
+<td>0.222222</td>
+<td>108</td>
+<td>108</td>
+<td>0.518519</td>
+<td>0.481481</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>1</td>
+<td>0.222222</td>
+<td>107</td>
+<td>107</td>
+<td>0.514019</td>
+<td>0.485981</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2</td>
+<td>0.444444</td>
+<td>109</td>
+<td>109</td>
+<td>0.477064</td>
+<td>0.522936</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>2</td>
+<td>0.444444</td>
+<td>104</td>
+<td>104</td>
+<td>0.519231</td>
+<td>0.480769</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>2</td>
+<td>0.444444</td>
+<td>112</td>
+<td>112</td>
+<td>0.553571</td>
+<td>0.446429</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>2</td>
+<td>0.444444</td>
+<td>102</td>
+<td>102</td>
+<td>0.519608</td>
+<td>0.480392</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>2</td>
+<td>0.444444</td>
+<td>109</td>
+<td>109</td>
+<td>0.486239</td>
+<td>0.513761</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.523810</td>
+<td>0.476190</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>3</td>
+<td>0.666667</td>
+<td>104</td>
+<td>104</td>
+<td>0.548077</td>
+<td>0.451923</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>3</td>
+<td>0.666667</td>
+<td>113</td>
+<td>113</td>
+<td>0.486726</td>
+<td>0.513274</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.504762</td>
+<td>0.495238</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>3</td>
+<td>0.666667</td>
+<td>105</td>
+<td>105</td>
+<td>0.495238</td>
+<td>0.504762</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>4</td>
+<td>0.888889</td>
+<td>94</td>
+<td>94</td>
+<td>0.521277</td>
+<td>0.478723</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>4</td>
+<td>0.888889</td>
+<td>103</td>
+<td>103</td>
+<td>0.553398</td>
+<td>0.446602</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>4</td>
+<td>0.888889</td>
+<td>99</td>
+<td>99</td>
+<td>0.515152</td>
+<td>0.484848</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>4</td>
+<td>0.888889</td>
+<td>102</td>
+<td>102</td>
+<td>0.509804</td>
+<td>0.490196</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>4</td>
+<td>0.888889</td>
+<td>95</td>
+<td>95</td>
+<td>0.515789</td>
+<td>0.484211</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>5</td>
+<td>1.111111</td>
+<td>103</td>
+<td>103</td>
+<td>0.475728</td>
+<td>0.524272</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">26</td>
+<td>5</td>
+<td>1.111111</td>
+<td>100</td>
+<td>100</td>
+<td>0.490000</td>
+<td>0.510000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">27</td>
+<td>5</td>
+<td>1.111111</td>
+<td>108</td>
+<td>108</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>5</td>
+<td>1.111111</td>
+<td>103</td>
+<td>103</td>
+<td>0.475728</td>
+<td>0.524272</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">29</td>
+<td>5</td>
+<td>1.111111</td>
+<td>102</td>
+<td>102</td>
+<td>0.529412</td>
+<td>0.470588</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">30</td>
+<td>6</td>
+<td>1.333333</td>
+<td>99</td>
+<td>95</td>
+<td>0.494737</td>
+<td>0.505263</td>
+<td>0.040404</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">31</td>
+<td>6</td>
+<td>1.333333</td>
+<td>102</td>
+<td>102</td>
+<td>0.480392</td>
+<td>0.519608</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>6</td>
+<td>1.333333</td>
+<td>98</td>
+<td>98</td>
+<td>0.520408</td>
+<td>0.479592</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">33</td>
+<td>6</td>
+<td>1.333333</td>
+<td>104</td>
+<td>104</td>
+<td>0.490385</td>
+<td>0.509615</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">34</td>
+<td>6</td>
+<td>1.333333</td>
+<td>92</td>
+<td>85</td>
+<td>0.541176</td>
+<td>0.458824</td>
+<td>0.076087</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">35</td>
+<td>7</td>
+<td>1.555556</td>
+<td>100</td>
+<td>100</td>
+<td>0.500000</td>
+<td>0.500000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>7</td>
+<td>1.555556</td>
+<td>101</td>
+<td>100</td>
+<td>0.550000</td>
+<td>0.450000</td>
+<td>0.009901</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">37</td>
+<td>7</td>
+<td>1.555556</td>
+<td>105</td>
+<td>98</td>
+<td>0.540816</td>
+<td>0.459184</td>
+<td>0.066667</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">38</td>
+<td>7</td>
+<td>1.555556</td>
+<td>40</td>
+<td>39</td>
+<td>0.615385</td>
+<td>0.384615</td>
+<td>0.025000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">39</td>
+<td>7</td>
+<td>1.555556</td>
+<td>38</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">40</td>
+<td>8</td>
+<td>1.777778</td>
+<td>47</td>
+<td>46</td>
+<td>0.695652</td>
+<td>0.304348</td>
+<td>0.021277</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">41</td>
+<td>8</td>
+<td>1.777778</td>
+<td>30</td>
+<td>9</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.700000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">42</td>
+<td>8</td>
+<td>1.777778</td>
+<td>10</td>
+<td>9</td>
+<td>0.555556</td>
+<td>0.444444</td>
+<td>0.100000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">43</td>
+<td>8</td>
+<td>1.777778</td>
+<td>102</td>
+<td>85</td>
+<td>0.529412</td>
+<td>0.470588</td>
+<td>0.166667</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">44</td>
+<td>8</td>
+<td>1.777778</td>
+<td>118</td>
+<td>65</td>
+<td>0.507692</td>
+<td>0.492308</td>
+<td>0.449153</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>9</td>
+<td>2.000000</td>
+<td>52</td>
+<td>5</td>
+<td>0.600000</td>
+<td>0.400000</td>
+<td>0.903846</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">46</td>
+<td>9</td>
+<td>2.000000</td>
+<td>35</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">47</td>
+<td>9</td>
+<td>2.000000</td>
+<td>89</td>
+<td>48</td>
+<td>0.520833</td>
+<td>0.479167</td>
+<td>0.460674</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">48</td>
+<td>9</td>
+<td>2.000000</td>
+<td>27</td>
+<td>1</td>
+<td>1.000000</td>
+<td>0.000000</td>
+<td>0.962963</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">49</td>
+<td>9</td>
+<td>2.000000</td>
+<td>48</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="разовая-генерация" class="level2">
+<h2 class="anchored" data-anchor-id="разовая-генерация">Разовая генерация</h2>
+<p>Просим по очереди генерировать все новые результаты, в духе<br>
+User &gt;&gt;&gt; Подбрось монетку<br>
+Chat &gt;&gt;&gt; O<br>
+User &gt;&gt;&gt; Подбрось монетку<br>
+Chat &gt;&gt;&gt; P<br>
+….</p>
+<p>TBA</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
