@@ -7,10 +7,10 @@ website:
   navbar:
     right:
       - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - icon: telegram
+        text: Telegram Channel
+        href: https://t.me/PavelBaboshkin_channel
+
 format:
   html:
     theme:
