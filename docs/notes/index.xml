@@ -5,20 +5,15 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Blog</title>
+<title>Pablo science</title>
 <link>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/</link>
 <atom:link href="https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<image>
-<url>https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png</url>
-<title>Blog</title>
-<link>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/</link>
-</image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Sun, 16 Feb 2025 11:08:07 GMT</lastBuildDate>
+<lastBuildDate>Sun, 16 Feb 2025 14:00:20 GMT</lastBuildDate>
 <item>
-  <title>LLMs</title>
-  <link>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/work/</link>
+  <title>Book notes</title>
+  <link>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/books/</link>
   <description><![CDATA[ 
 
 
@@ -34,6 +29,124 @@
 <thead>
 <tr>
 <th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Ym9va3M=" data-listing-date-sort="1721682000000" data-listing-file-modified-sort="1739711988610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286" data-listing-title-sort="Data for the People by Andreas Wiegend" data-listing-filename-sort="Data for the People by Andreas Wiegend.qmd">
+<td>
+<span class="listing-date">Jul 23, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/Data for the People by Andreas Wiegend.html" class="title listing-title">Data for the People by Andreas Wiegend</a>
+</td>
+<td>
+<span class="listing-description">Немного страшилок, немного предложений по теме…</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="Ym9va3M=" data-listing-date-sort="1722114000000" data-listing-file-modified-sort="1739711696195" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2905" data-listing-title-sort="Summa Technologiae by Stanislaw Lem" data-listing-filename-sort="Summa Technologiae by Stanislaw Lem.qmd">
+<td>
+<span class="listing-date">Jul 28, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/Summa Technologiae by Stanislaw Lem.html" class="title listing-title">Summa Technologiae by Stanislaw Lem</a>
+</td>
+<td>
+<span class="listing-description">Прозрение на будущее технологий от одного из…</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739711246061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417" data-listing-title-sort="Agent of Influence by Janson Hanson" data-listing-filename-sort="Agent of Influence by Janson Hanson.qmd">
+<td>
+<span class="listing-date">Aug 4, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/Agent of Influence by Janson Hanson.html" class="title listing-title">Agent of Influence by Janson Hanson</a>
+</td>
+<td>
+<span class="listing-description">Успешный успех на принципах спецслужб</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739711045773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2343" data-listing-title-sort="Games People Play by Eric Berne" data-listing-filename-sort="Games People Play by Eric Berne.qmd">
+<td>
+<span class="listing-date">Aug 4, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/Games People Play by Eric Berne.html" class="title listing-title">Games People Play by Eric Berne</a>
+</td>
+<td>
+<span class="listing-description">Трансакционный анализ взамиодействия людей</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="Ym9va3M=" data-listing-date-sort="1723064400000" data-listing-file-modified-sort="1739709609648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140" data-listing-title-sort="The Road to Serfdom by Friedrich Hayek" data-listing-filename-sort="The Road to Serfdom by Friedrich Hayek.qmd">
+<td>
+<span class="listing-date">Aug 8, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html" class="title listing-title">The Road to Serfdom by Friedrich Hayek</a>
+</td>
+<td>
+<span class="listing-description">Эссе о политике и экономике от левого крыла…</span>
+</td>
+</tr>
+<tr data-index="5" data-categories="Ym9va3M=" data-listing-date-sort="1723410000000" data-listing-file-modified-sort="1739708872692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777" data-listing-title-sort="The Autobiography of Benjamin Franklin" data-listing-filename-sort="The Autobiography of Benjamin Franklin.qmd">
+<td>
+<span class="listing-date">Aug 12, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/The Autobiography of Benjamin Franklin.html" class="title listing-title">The Autobiography of Benjamin Franklin</a>
+</td>
+<td>
+<span class="listing-description">Автобиография одного из самых влиятельных людей…</span>
+</td>
+</tr>
+<tr data-index="6" data-categories="Ym9va3M=" data-listing-date-sort="1723669200000" data-listing-file-modified-sort="1739710057141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1225" data-listing-title-sort="How to see George Nelson" data-listing-filename-sort="How to see George Nelson.qmd">
+<td>
+<span class="listing-date">Aug 15, 2024</span>
+</td>
+<td>
+<a href="../../notes/books/How to see George Nelson.html" class="title listing-title">How to see George Nelson</a>
+</td>
+<td>
+<span class="listing-description">Инструкция по тому, как видеть мир</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div> ]]></description>
+  <guid>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/books/</guid>
+  <pubDate>Sun, 16 Feb 2025 14:00:20 GMT</pubDate>
+</item>
+<item>
+  <title>Causal Inference</title>
+  <link>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/causal inference/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
 Title
 </th>
 <th>
@@ -48,8 +161,8 @@ Description
 No matching items
 </div>
 </div> ]]></description>
-  <guid>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/work/</guid>
-  <pubDate>Sun, 16 Feb 2025 11:08:07 GMT</pubDate>
+  <guid>https://PavelBaboshkin.github.io/pavelbaboshkin.github.io/notes/causal inference/</guid>
+  <pubDate>Sun, 16 Feb 2025 14:00:20 GMT</pubDate>
 </item>
 </channel>
 </rss>

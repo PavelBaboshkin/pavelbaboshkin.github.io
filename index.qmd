@@ -1,4 +1,6 @@
 ---
+description: "Personal blog"
+toc: true
 listing:
   date-format: short
   contents: notes

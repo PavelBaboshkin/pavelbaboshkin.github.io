@@ -1,12 +1,13 @@
 project:
   type: website
   output-dir: docs
+  title: "Pablo science"
 site:
   favicon: "favicon.png"
 
 website:
   navbar:
-    title: false
+    title: true
     pinned: true
     collapse: false
     left:
@@ -19,7 +20,6 @@ website:
   google-analytics:
     tracking-id: "G-JJNXYRZ5C4"
     anonymize-ip: true
-
 
   sidebar:
     - title: Notes
