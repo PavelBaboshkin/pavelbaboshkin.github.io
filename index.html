@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Personal blog">
+<meta name="description" content="Data Science/AI/Entrepreneurship">
 
-<title>Pablo science</title>
+<title>Pablo Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
+<link href="./resources/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -42,8 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6d5f49080fd7a04518cb6db3008564bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-85edd2b6253b0e64fa8c9613eabc1e80.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b916b7f198a76df60a000b13a3477f81.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0202a8281d25de7a9b3f625c81eb5e8f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -140,7 +140,11 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="resources/styles.css">
+<link rel="alternate" type="application/rss+xml" title="Pablo Science" href="index.xml" data-external="1"><meta property="og:title" content="Pablo Science">
+<meta property="og:description" content="Data Science/AI/Entrepreneurship">
+<meta property="og:image" content="https://pavelbaboshkin.github.io/resources/pablo.jpg">
+<meta property="og:site_name" content="Pablo Science">
 </head>
 
 <body class="nav-fixed">
@@ -149,11 +153,6 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">true</span>
-    </a>
-  </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
@@ -177,235 +176,157 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Ym9va3M=">books <span class="quarto-category-count">(7)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">👋 About</a></li>
+  <li><a href="#work-with-me" id="toc-work-with-me" class="nav-link" data-scroll-target="#work-with-me">💼 Work With Me</a></li>
+  <li><a href="#recent-posts" id="toc-recent-posts" class="nav-link" data-scroll-target="#recent-posts">🗞️ Recent Posts</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<p>Привет!</p>
-<p>Я Паша - учусь и работаю в области анализа данных. Немного поработал в Ozon и TBank, побольше поработал в Raiffeisen bank и Vkusvill, сейчас тружусь как Team Lead Data Analyst в Magnit.</p>
-<p>Сюда пишу содержательые заметки об аналитике, ИИ, учебе и проектах. Ежедневно вещаю в телеграм канале <a href="https://t.me/PavelBaboshkin_channel">Pablo science</a></p>
-<p>Последние заметки:</p>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Ym9va3M=" data-listing-date-sort="1723669200000" data-listing-file-modified-sort="1739710057141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1225">
-<div class="thumbnail">
-<p><a href="./notes/books/How to see George Nelson.html" class="no-external"></a></p><a href="./notes/books/How to see George Nelson.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/How to see George Nelson.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/How to see George Nelson.html" class="no-external">How to see George Nelson</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/How to see George Nelson.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/How to see George Nelson.html" class="no-external">Инструкция по тому, как видеть мир</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/How to see George Nelson.html" class="no-external">
-<div class="listing-date">
-8/15/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Ym9va3M=" data-listing-date-sort="1723410000000" data-listing-file-modified-sort="1739708872692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
-<div class="thumbnail">
-<p><a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external"></a></p><a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external">The Autobiography of Benjamin Franklin</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external">Автобиография одного из самых влиятельных людей в XVIII века</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="no-external">
-<div class="listing-date">
-8/12/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Ym9va3M=" data-listing-date-sort="1723064400000" data-listing-file-modified-sort="1739709609648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140">
-<div class="thumbnail">
-<p><a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external"></a></p><a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external">The Road to Serfdom by Friedrich Hayek</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external">Эссе о политике и экономике от левого крыла середины XX века</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="no-external">
-<div class="listing-date">
-8/8/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739711246061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
-<div class="thumbnail">
-<p><a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external"></a></p><a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external">Agent of Influence by Janson Hanson</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external">Успешный успех на принципах спецслужб</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/Agent of Influence by Janson Hanson.html" class="no-external">
-<div class="listing-date">
-8/4/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739711045773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2343">
-<div class="thumbnail">
-<p><a href="./notes/books/Games People Play by Eric Berne.html" class="no-external"></a></p><a href="./notes/books/Games People Play by Eric Berne.html" class="no-external">
-<p class="card-img-top"><img src="notes/books/images/games_people_play_framework.png" alt="framework"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./notes/books/Games People Play by Eric Berne.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/Games People Play by Eric Berne.html" class="no-external">Games People Play by Eric Berne</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/Games People Play by Eric Berne.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/Games People Play by Eric Berne.html" class="no-external">Трансакционный анализ взамиодействия людей</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/Games People Play by Eric Berne.html" class="no-external">
-<div class="listing-date">
-8/4/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Ym9va3M=" data-listing-date-sort="1722114000000" data-listing-file-modified-sort="1739711696195" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2905">
-<div class="thumbnail">
-<p><a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external"></a></p><a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external">Summa Technologiae by Stanislaw Lem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external">Прозрение на будущее технологий от одного из самых известных футурологов</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="no-external">
-<div class="listing-date">
-7/28/24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Ym9va3M=" data-listing-date-sort="1721682000000" data-listing-file-modified-sort="1739711988610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286">
-<div class="thumbnail">
-<p><a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external"></a></p><a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external">Data for the People by Andreas Wiegend</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">
-books
-</div>
-</div>
-<div class="listing-description">
-<a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external">Немного страшилок, немного предложений по теме упраления данными людей</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./notes/books/Data for the People by Andreas Wiegend.html" class="no-external">
-<div class="listing-date">
-7/23/24
-</div>
-</a>
-</div>
-</div>
-</div>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">👋 About</h2>
+<div>
+
+</div>
+<div class="profile-header quarto-layout-panel" data-layout="[21,79]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 21.0%;justify-content: center;">
+<p><img src="resources/pablo.jpg" class="profile-pic img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 79.0%;justify-content: flex-start;">
+<p>Привет! Я Паша, учусь и работаю в области анализа данных. Немного поработал в Ozon и TBank, побольше поработал в Raiffeisen bank и Vkusvill, сейчас тружусь как Team Lead Data Analyst в Magnit. Сюда пишу содержательые заметки об аналитике, ИИ, учебе и проектах. Ежедневно вещаю в телеграм канале <a href="https://t.me/PavelBaboshkin_channel">Pablo science</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="work-with-me" class="level2">
+<h2 class="anchored" data-anchor-id="work-with-me">💼 Work With Me</h2>
+<p>Посмотреть резюме можно тут - <a href="./resources/cv.html">Pavel Baboshkin CV</a><br>
+Запросить консультацию можно в телеграмм - <a href="https://t.me/PavelBaboshkin">Pavel Baboshkin</a></p>
+</section>
+<section id="recent-posts" class="level2">
+<h2 class="anchored" data-anchor-id="recent-posts">🗞️ Recent Posts</h2>
+<p>Все заметки в структурированном виде рекомендую смотреть в разделе <a href="./notes/index.html">notes</a><br>
+В таблице видны последние посты:</p>
+<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-table">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Ym9va3M=" data-listing-date-sort="1723669200000" data-listing-file-modified-sort="1739725309248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1225" data-listing-title-sort="How to see George Nelson" data-listing-filename-sort="How to see George Nelson.qmd">
+<td>
+<span class="listing-date">8/15/24</span>
+</td>
+<td>
+<a href="./notes/books/How to see George Nelson.html" class="title listing-title">How to see George Nelson</a>
+</td>
+<td>
+<span class="listing-description">Инструкция по тому, как видеть мир</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="Ym9va3M=" data-listing-date-sort="1723410000000" data-listing-file-modified-sort="1739725309250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777" data-listing-title-sort="The Autobiography of Benjamin Franklin" data-listing-filename-sort="The Autobiography of Benjamin Franklin.qmd">
+<td>
+<span class="listing-date">8/12/24</span>
+</td>
+<td>
+<a href="./notes/books/The Autobiography of Benjamin Franklin.html" class="title listing-title">The Autobiography of Benjamin Franklin</a>
+</td>
+<td>
+<span class="listing-description">Автобиография одного из самых влиятельных людей в XVIII века</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="Ym9va3M=" data-listing-date-sort="1723064400000" data-listing-file-modified-sort="1739725309251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140" data-listing-title-sort="The Road to Serfdom by Friedrich Hayek" data-listing-filename-sort="The Road to Serfdom by Friedrich Hayek.qmd">
+<td>
+<span class="listing-date">8/8/24</span>
+</td>
+<td>
+<a href="./notes/books/The Road to Serfdom by Friedrich Hayek.html" class="title listing-title">The Road to Serfdom by Friedrich Hayek</a>
+</td>
+<td>
+<span class="listing-description">Эссе о политике и экономике от левого крыла середины XX века</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739725309244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417" data-listing-title-sort="Agent of Influence by Janson Hanson" data-listing-filename-sort="Agent of Influence by Janson Hanson.qmd">
+<td>
+<span class="listing-date">8/4/24</span>
+</td>
+<td>
+<a href="./notes/books/Agent of Influence by Janson Hanson.html" class="title listing-title">Agent of Influence by Janson Hanson</a>
+</td>
+<td>
+<span class="listing-description">Успешный успех на принципах спецслужб</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="Ym9va3M=" data-listing-date-sort="1722718800000" data-listing-file-modified-sort="1739729821783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2345" data-listing-title-sort="Games People Play by Eric Berne" data-listing-filename-sort="Games People Play by Eric Berne.qmd">
+<td>
+<span class="listing-date">8/4/24</span>
+</td>
+<td>
+<a href="./notes/books/Games People Play by Eric Berne.html" class="title listing-title">Games People Play by Eric Berne</a>
+</td>
+<td>
+<span class="listing-description">Трансакционный анализ взамиодействия людей</span>
+</td>
+</tr>
+<tr data-index="5" data-categories="ZXNzYXklMkNBQiUyMHRlc3RpbmclMkNzdGF0aXN0aWNz" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1739732463108" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1970" data-listing-title-sort="History of AB" data-listing-filename-sort="History of AB testing.qmd">
+<td>
+<span class="listing-date">7/31/24</span>
+</td>
+<td>
+<a href="./notes/essays/History of AB testing.html" class="title listing-title">History of AB</a>
+</td>
+<td>
+<span class="listing-description">Видение того, как развивались и будут развиваться рандомизированные тесты</span>
+</td>
+</tr>
+<tr data-index="6" data-categories="Ym9va3M=" data-listing-date-sort="1722114000000" data-listing-file-modified-sort="1739725309249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2905" data-listing-title-sort="Summa Technologiae by Stanislaw Lem" data-listing-filename-sort="Summa Technologiae by Stanislaw Lem.qmd">
+<td>
+<span class="listing-date">7/28/24</span>
+</td>
+<td>
+<a href="./notes/books/Summa Technologiae by Stanislaw Lem.html" class="title listing-title">Summa Technologiae by Stanislaw Lem</a>
+</td>
+<td>
+<span class="listing-description">Прозрение на будущее технологий от одного из самых известных футурологов</span>
+</td>
+</tr>
+<tr data-index="7" data-categories="Ym9va3M=" data-listing-date-sort="1721682000000" data-listing-file-modified-sort="1739725309245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286" data-listing-title-sort="Data for the People by Andreas Wiegend" data-listing-filename-sort="Data for the People by Andreas Wiegend.qmd">
+<td>
+<span class="listing-date">7/23/24</span>
+</td>
+<td>
+<a href="./notes/books/Data for the People by Andreas Wiegend.html" class="title listing-title">Data for the People by Andreas Wiegend</a>
+</td>
+<td>
+<span class="listing-description">Немного страшилок, немного предложений по теме упраления данными людей</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -413,6 +334,7 @@ No matching items
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -649,7 +571,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/PavelBaboshkin\.github\.io\/pavelbaboshkin\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/pavelbaboshkin\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

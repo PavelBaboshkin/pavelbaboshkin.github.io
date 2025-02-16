@@ -1,18 +1,9 @@
 [
   {
-    "listing": "/notes/causal inference/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/books/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/notes/books/Data for the People by Andreas Wiegend.html",
-      "/notes/books/Summa Technologiae by Stanislaw Lem.html",
-      "/notes/books/Agent of Influence by Janson Hanson.html",
-      "/notes/books/Games People Play by Eric Berne.html",
-      "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
-      "/notes/books/The Autobiography of Benjamin Franklin.html",
-      "/notes/books/How to see George Nelson.html"
+      "/notes/books/index.html",
+      "/notes/essays/index.html"
     ]
   },
   {
@@ -23,15 +14,27 @@
       "/notes/books/The Road to Serfdom by Friedrich Hayek.html",
       "/notes/books/Agent of Influence by Janson Hanson.html",
       "/notes/books/Games People Play by Eric Berne.html",
+      "/notes/essays/History of AB testing.html",
       "/notes/books/Summa Technologiae by Stanislaw Lem.html",
       "/notes/books/Data for the People by Andreas Wiegend.html"
     ]
   },
   {
-    "listing": "/notes/index.html",
+    "listing": "/notes/essays/index.html",
     "items": [
-      "/notes/books/index.html",
-      "/notes/causal inference/index.html"
+      "/notes/essays/History of AB testing.html"
+    ]
+  },
+  {
+    "listing": "/notes/books/index.html",
+    "items": [
+      "/notes/books/Agent of Influence by Janson Hanson.html",
+      "/notes/books/Data for the People by Andreas Wiegend.html",
+      "/notes/books/Games People Play by Eric Berne.html",
+      "/notes/books/How to see George Nelson.html",
+      "/notes/books/Summa Technologiae by Stanislaw Lem.html",
+      "/notes/books/The Autobiography of Benjamin Franklin.html",
+      "/notes/books/The Road to Serfdom by Friedrich Hayek.html"
     ]
   }
 ]
