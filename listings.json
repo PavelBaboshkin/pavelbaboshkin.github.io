@@ -2,14 +2,31 @@
   {
     "listing": "/notes/index.html",
     "items": [
-      "/notes/books/index.html",
+      "/notes/cources/causality_judea_pearl/index.html",
       "/notes/essays/index.html",
-      "/notes/research/index.html"
+      "/notes/research/index.html",
+      "/notes/articles/index.html",
+      "/notes/cources/index.html",
+      "/notes/books/index.html"
+    ]
+  },
+  {
+    "listing": "/notes/cources/causality_judea_pearl/index.html",
+    "items": [
+      "/notes/cources/causality_judea_pearl/chapter_1.html"
+    ]
+  },
+  {
+    "listing": "/notes/cources/index.html",
+    "items": [
+      "/notes/cources/causality_judea_pearl/index.html",
+      "/notes/cources/causality_judea_pearl/chapter_1.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/notes/cources/causality_judea_pearl/chapter_1.html",
       "/notes/research/ChatGPT random generator.html",
       "/notes/books/How to see George Nelson.html",
       "/notes/books/The Autobiography of Benjamin Franklin.html",
@@ -32,6 +49,10 @@
     "items": [
       "/notes/essays/History of AB testing.html"
     ]
+  },
+  {
+    "listing": "/notes/articles/index.html",
+    "items": []
   },
   {
     "listing": "/notes/books/index.html",
