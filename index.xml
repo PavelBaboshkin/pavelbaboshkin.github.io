@@ -44,7 +44,7 @@
 * симметрия <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20Y%20%7C%20Z)%20%5Cimplies%20(Y%20%5Cperp%20X%20%7C%20Z)"> - если при известном Z, Y не говорит ничего нового об X, то и X не говорит ничего нового об Y<br>
 * декомпозиция <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20YW%7C%20Z)%20%5Cimplies%20(X%20%5Cperp%20Y%7C%20Z)"> - если 2 объединенных факта YW не важны для X то они не важны и по отдельности<br>
 * слабое объединение <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20YW%7C%20Z)%20%5Cimplies%20(X%20%5Cperp%20Y%7CZW)"> - получение нерелевантной информации W не позволяет сделать Y релевантным для X<br>
-* сокражение <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20Y%20%7C%20Z)%20%5C&amp;%20(X%20%5Cperp%20W%20%7CZY)%20%5Cimplies%20(X%20%5Cperp%20YW%20%7C%20Z)"> - если при получении данных W выясняется что Y не релевантен X, то и до получения этих данных он должен быть нерелевантен<br>
+* сокращение <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20Y%20%7C%20Z)%20%5C&amp;%20(X%20%5Cperp%20W%20%7CZY)%20%5Cimplies%20(X%20%5Cperp%20YW%20%7C%20Z)"> - если при получении данных W выясняется что Y не релевантен X, то и до получения этих данных он должен быть нерелевантен<br>
 * пересечение <img src="https://latex.codecogs.com/png.latex?(X%20%5Cperp%20W%20%7C%20ZY)%20%5C&amp;%20(X%20%5Cperp%20Y%7CZW)%20%5Cimplies%20(X%20%5Cperp%20YW%7CZ)"> - если W не важен для X при известном Y и Y не важен для X при известном W то ни W ни Y ни их комбинации не важны для X</p>
 
 
