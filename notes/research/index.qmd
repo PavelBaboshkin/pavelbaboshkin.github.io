@@ -1,0 +1,5 @@
+---
+title: My researches
+description: Исследования обо всем на свете
+metadata-files: ["../_listing_meta.yml"]
+---

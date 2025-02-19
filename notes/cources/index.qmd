@@ -1,0 +1,5 @@
+---
+title: Notes on completed courses
+description: Заметки по пройденным курсам
+metadata-files: ["../_listing_meta.yml"]
+---

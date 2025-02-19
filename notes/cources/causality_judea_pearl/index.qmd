@@ -1,0 +1,5 @@
+---
+title: Causality Judea Pearl
+description: Конспект курса причинно-следственного анализа из книги "Causality, models, reasoning, inference" - Judea Pearl
+metadata-files: ["../../_listing_meta.yml"]
+---

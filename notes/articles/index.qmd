@@ -1,0 +1,5 @@
+---
+title: Notes on articles read
+description: Заметки по прочитанным статьям
+metadata-files: ["../_listing_meta.yml"]
+---
