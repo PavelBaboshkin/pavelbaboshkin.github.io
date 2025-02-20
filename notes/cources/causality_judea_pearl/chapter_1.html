@@ -304,6 +304,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#вероятность" id="toc-вероятность" class="nav-link active" data-scroll-target="#вероятность">Вероятность</a></li>
+  <li><a href="#графы-и-вероятность" id="toc-графы-и-вероятность" class="nav-link" data-scroll-target="#графы-и-вероятность">Графы и вероятность</a></li>
   </ul>
 </nav>
     </div>
@@ -365,6 +366,21 @@ window.Quarto = {
 * слабое объединение <span class="math inline">\((X \perp YW| Z) \implies (X \perp Y|ZW)\)</span> - получение нерелевантной информации W не позволяет сделать Y релевантным для X<br>
 * сокращение <span class="math inline">\((X \perp Y | Z) \&amp; (X \perp W |ZY) \implies (X \perp YW | Z)\)</span> - если при получении данных W выясняется что Y не релевантен X, то и до получения этих данных он должен быть нерелевантен<br>
 * пересечение <span class="math inline">\((X \perp W | ZY) \&amp; (X \perp Y|ZW) \implies (X \perp YW|Z)\)</span> - если W не важен для X при известном Y и Y не важен для X при известном W то ни W ни Y ни их комбинации не важны для X</p>
+</section>
+<section id="графы-и-вероятность" class="level1">
+<h1>Графы и вероятность</h1>
+<p>Граф состоит из <span class="math inline">\(V\)</span> вершин (нод) и множества <span class="math inline">\(E\)</span> ребер соединяющих пары першин. Две соединенные ребром вершины называются соседними. Граф может быть ориентированным, если его ребрам присовено направление. Цикл в графе это возможность “пройти по стрелочкам” так, чтобы вернуться в ту вершину, из которой начался путь. Направленный граф без циклов называется DAG - directed acyclig graph.</p>
+<p><strong>Марковские родители</strong> - множество переменных <span class="math inline">\(PA_i\)</span> называется Марковскими родителями для <span class="math inline">\(X_j\)</span> если <span class="math inline">\(PA_i\)</span> это минимальное подмножество предшествующих нод для <span class="math inline">\(X_j\)</span> если они делают <span class="math inline">\(X_j\)</span> независимыми от всех остальных предшественников.</p>
+<p><strong>Маркеовская совместимость</strong> - если вероятностная функция <span class="math inline">\(P\)</span> согласуется с разложением направленного ациклического графа <span class="math inline">\(G\)</span>, то можно сказать, что <span class="math inline">\(G\)</span> совместим с <span class="math inline">\(P\)</span></p>
+<p><strong>d-разделимость</strong> - путь <span class="math inline">\(p\)</span> называется <span class="math inline">\(d\)</span>-разделимым (заблокированным) множеством вершин <span class="math inline">\(Z\)</span> если:<br>
+* <span class="math inline">\(p\)</span> содержит цень <span class="math inline">\(i-&gt;m-&gt;j\)</span> или ветвление <span class="math inline">\(i&lt;-m-&gt;j\)</span> такое, что вершина <span class="math inline">\(m\)</span> находится в <span class="math inline">\(Z\)</span><br>
+* <span class="math inline">\(p\)</span> содержит обратное ветвление (коллайдер) <span class="math inline">\(i-&gt;m&lt;-j\)</span> и вершина <span class="math inline">\(m\)</span> не находится в <span class="math inline">\(Z\)</span> и ни один потомок <span class="math inline">\(m\)</span> также не находится в <span class="math inline">\(Z\)</span></p>
+<p>Множество <span class="math inline">\(Z\)</span> <span class="math inline">\(d\)</span>-разделяет путь <span class="math inline">\(X-&gt;Y\)</span> если <span class="math inline">\(Z\)</span> блокирует каждый путь от <span class="math inline">\(X\)</span> к <span class="math inline">\(Y\)</span></p>
+<p><strong>Теорема: Вероятностный смысл d-разделимости</strong> - если множества <span class="math inline">\(X\)</span> и <span class="math inline">\(Y\)</span> <span class="math inline">\(d\)</span>-разделимы по <span class="math inline">\(Z\)</span> в направленном ациклическом графе <span class="math inline">\(G\)</span>, то <span class="math inline">\(X\)</span> условно не зависит от <span class="math inline">\(Y\)</span> при заданных <span class="math inline">\(Z\)</span> при любом распределении совместимом с <span class="math inline">\(G\)</span></p>
+<p><strong>Баесовская причинная сеть</strong> - Пусть <span class="math inline">\(P(v)\)</span> вероятностное распределение для множества переменных <span class="math inline">\(V\)</span>, и пусть <span class="math inline">\(P_x(v)\)</span> обозначает распределение полученное в результате воздействия <span class="math inline">\(do(X=x)\)</span> которое приравнивает подмножество переменных <span class="math inline">\(X\)</span> к константам <span class="math inline">\(x\)</span>. Обозначим как <span class="math inline">\(P*\)</span> множество всех воздействий <span class="math inline">\(P_x(v), X \subseteq V\)</span> включая <span class="math inline">\(P(v)\)</span>, которое отображает отсутствие воздействий. Тогда DAG G можно назвать причинной Баесовской сетью совместимой с <span class="math inline">\(P*\)</span> тогда и только тогда, если для каждого <span class="math inline">\(P_x \in P*\)</span> выполняется:<br>
+* <span class="math inline">\(P_x(v)\)</span> сопоставима с G<br>
+* <span class="math inline">\(P_x(v_i)=1\)</span> для всех <span class="math inline">\(V_i \in X\)</span> когда <span class="math inline">\(v_i\)</span> согласуется с <span class="math inline">\(X = x\)</span><br>
+* <span class="math inline">\(P_x(v_i|pa_i)=P(v_i|pa_i)\)</span> для всех <span class="math inline">\(V_i \notin X\)</span> когда <span class="math inline">\(pa_i\)</span> согласуется с <span class="math inline">\(X = x\)</span>. т.е. каждый <span class="math inline">\(P(v_i|pa_i)\)</span> остается неизменен от воздействий не связанных с <span class="math inline">\(V_i\)</span></p>
 
 
 </section>
