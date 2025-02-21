@@ -57,10 +57,33 @@
 * <img src="https://latex.codecogs.com/png.latex?p"> содержит обратное ветвление (коллайдер) <img src="https://latex.codecogs.com/png.latex?i-%3Em%3C-j"> и вершина <img src="https://latex.codecogs.com/png.latex?m"> не находится в <img src="https://latex.codecogs.com/png.latex?Z"> и ни один потомок <img src="https://latex.codecogs.com/png.latex?m"> также не находится в <img src="https://latex.codecogs.com/png.latex?Z"></p>
 <p>Множество <img src="https://latex.codecogs.com/png.latex?Z"> <img src="https://latex.codecogs.com/png.latex?d">-разделяет путь <img src="https://latex.codecogs.com/png.latex?X-%3EY"> если <img src="https://latex.codecogs.com/png.latex?Z"> блокирует каждый путь от <img src="https://latex.codecogs.com/png.latex?X"> к <img src="https://latex.codecogs.com/png.latex?Y"></p>
 <p><strong>Теорема: Вероятностный смысл d-разделимости</strong> - если множества <img src="https://latex.codecogs.com/png.latex?X"> и <img src="https://latex.codecogs.com/png.latex?Y"> <img src="https://latex.codecogs.com/png.latex?d">-разделимы по <img src="https://latex.codecogs.com/png.latex?Z"> в направленном ациклическом графе <img src="https://latex.codecogs.com/png.latex?G">, то <img src="https://latex.codecogs.com/png.latex?X"> условно не зависит от <img src="https://latex.codecogs.com/png.latex?Y"> при заданных <img src="https://latex.codecogs.com/png.latex?Z"> при любом распределении совместимом с <img src="https://latex.codecogs.com/png.latex?G"></p>
+</section>
+<section id="причинные-баесовские-сети" class="level1">
+<h1>Причинные баесовские сети</h1>
 <p><strong>Баесовская причинная сеть</strong> - Пусть <img src="https://latex.codecogs.com/png.latex?P(v)"> вероятностное распределение для множества переменных <img src="https://latex.codecogs.com/png.latex?V">, и пусть <img src="https://latex.codecogs.com/png.latex?P_x(v)"> обозначает распределение полученное в результате воздействия <img src="https://latex.codecogs.com/png.latex?do(X=x)"> которое приравнивает подмножество переменных <img src="https://latex.codecogs.com/png.latex?X"> к константам <img src="https://latex.codecogs.com/png.latex?x">. Обозначим как <img src="https://latex.codecogs.com/png.latex?P*"> множество всех воздействий <img src="https://latex.codecogs.com/png.latex?P_x(v),%20X%20%5Csubseteq%20V"> включая <img src="https://latex.codecogs.com/png.latex?P(v)">, которое отображает отсутствие воздействий. Тогда DAG G можно назвать причинной Баесовской сетью совместимой с <img src="https://latex.codecogs.com/png.latex?P*"> тогда и только тогда, если для каждого <img src="https://latex.codecogs.com/png.latex?P_x%20%5Cin%20P*"> выполняется:<br>
 * <img src="https://latex.codecogs.com/png.latex?P_x(v)"> сопоставима с G<br>
 * <img src="https://latex.codecogs.com/png.latex?P_x(v_i)=1"> для всех <img src="https://latex.codecogs.com/png.latex?V_i%20%5Cin%20X"> когда <img src="https://latex.codecogs.com/png.latex?v_i"> согласуется с <img src="https://latex.codecogs.com/png.latex?X%20=%20x"><br>
 * <img src="https://latex.codecogs.com/png.latex?P_x(v_i%7Cpa_i)=P(v_i%7Cpa_i)"> для всех <img src="https://latex.codecogs.com/png.latex?V_i%20%5Cnotin%20X"> когда <img src="https://latex.codecogs.com/png.latex?pa_i"> согласуется с <img src="https://latex.codecogs.com/png.latex?X%20=%20x">. т.е. каждый <img src="https://latex.codecogs.com/png.latex?P(v_i%7Cpa_i)"> остается неизменен от воздействий не связанных с <img src="https://latex.codecogs.com/png.latex?V_i"></p>
+<p>Свойства: * для всеx <img src="https://latex.codecogs.com/png.latex?i"> <img src="https://latex.codecogs.com/png.latex?P(v_i%7Cpa_i)=P_%7Bpa_i%7D(v_i)"> * для всех <img src="https://latex.codecogs.com/png.latex?i"> и каждого подмножества <img src="https://latex.codecogs.com/png.latex?S"> переменных непересекающхся с <img src="https://latex.codecogs.com/png.latex?%5C%7BV_i,%20PA_i%5C%7D"> выполняется <img src="https://latex.codecogs.com/png.latex?P_%7Bpa_i,s%7D(v_i)=P_%7Bpa_i%7D(v_i)"></p>
+</section>
+<section id="причинные-функциональные-модели" class="level1">
+<h1>Причинные функциональные модели</h1>
+<p>В описанной выше Баесовской концепции все связи предполагаются строго стохастическими, следовательно описываемые системы сугубо вероятностны а детерминированное описание это соглашение дял удобства работы с такими системами. В противоположность Лаплас описывает свой детерминизм, согласно которому все законы строго опредеелны, а случайность возникает из-за того, что какие-то переменные остаются ненаблюдаемыми.</p>
+<p>В книге (напомню что это конспект) - отдается предпочтение квази-детерминизму Лапласа, по трем причинам:<br>
+* Это более общая концепция, каждая случайная система может быть описана множеством функциональх связей, но обратное неверно<br>
+* Эта концепция проще для человеческого восприятия<br>
+* Эта парадигма позволяет описать контрфакты, то есть рассуждения вида “веростность события B <strong>из-за</strong> наступления события A”</p>
+<p>В общем виде функциональная причинная модель состоит из множества уровнений вида <img src="https://latex.codecogs.com/png.latex?x_i=%5Cmathcal%7Bf%7D(pa_i,%20u_i),%20i=1,...,n">, где:<br>
+* <img src="https://latex.codecogs.com/png.latex?pa_i"> - множество переменных, которые напрямую влияют на <img src="https://latex.codecogs.com/png.latex?X_i"><br>
+* <img src="https://latex.codecogs.com/png.latex?U_i"> - ошибки в оценках из-за пропущенных факторов<br>
+Это нелинейное и непараметрическое обобщение линейных структурных моделей (SEM): <img src="https://latex.codecogs.com/png.latex?x_i=%5Csum_%7Bk%5Cneq1%7D(a_%7Bik%7Dx_k%20+%20u_i)"></p>
+<p>Есть 3 типа запросов, на которые хотим отвечать своими моделями:<br>
+* предсказания - что будет с Y, если мы узнаем, что X произошло<br>
+* воздействие - что будет с Y, если мы заставим X случиться<br>
+* контрфакт - что будет с Y, если X случится, хотя нам известно, что когда X не случается Y=2</p>
+<p><strong>Условие причинности Маркова</strong> - в корректной Марковской причинной модели каждая переменная <img src="https://latex.codecogs.com/png.latex?X_i"> независима от ее не потомков при заданных родительских нодах <img src="https://latex.codecogs.com/png.latex?PA_i">. Это накладывает 2 предпосылки:<br>
+* полнота - мы должны включить в модель все переменные, которые влияют на 2 или больше переменных<br>
+* общая причина - если 2 переменных зависимы, то либо одна является причиной другой, либо есть третья, которая определяет обе предыдущие</p>
 
 
 </section>

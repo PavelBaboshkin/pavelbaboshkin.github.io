@@ -305,6 +305,8 @@ window.Quarto = {
   <ul>
   <li><a href="#вероятность" id="toc-вероятность" class="nav-link active" data-scroll-target="#вероятность">Вероятность</a></li>
   <li><a href="#графы-и-вероятность" id="toc-графы-и-вероятность" class="nav-link" data-scroll-target="#графы-и-вероятность">Графы и вероятность</a></li>
+  <li><a href="#причинные-баесовские-сети" id="toc-причинные-баесовские-сети" class="nav-link" data-scroll-target="#причинные-баесовские-сети">Причинные баесовские сети</a></li>
+  <li><a href="#причинные-функциональные-модели" id="toc-причинные-функциональные-модели" class="nav-link" data-scroll-target="#причинные-функциональные-модели">Причинные функциональные модели</a></li>
   </ul>
 </nav>
     </div>
@@ -377,10 +379,33 @@ window.Quarto = {
 * <span class="math inline">\(p\)</span> содержит обратное ветвление (коллайдер) <span class="math inline">\(i-&gt;m&lt;-j\)</span> и вершина <span class="math inline">\(m\)</span> не находится в <span class="math inline">\(Z\)</span> и ни один потомок <span class="math inline">\(m\)</span> также не находится в <span class="math inline">\(Z\)</span></p>
 <p>Множество <span class="math inline">\(Z\)</span> <span class="math inline">\(d\)</span>-разделяет путь <span class="math inline">\(X-&gt;Y\)</span> если <span class="math inline">\(Z\)</span> блокирует каждый путь от <span class="math inline">\(X\)</span> к <span class="math inline">\(Y\)</span></p>
 <p><strong>Теорема: Вероятностный смысл d-разделимости</strong> - если множества <span class="math inline">\(X\)</span> и <span class="math inline">\(Y\)</span> <span class="math inline">\(d\)</span>-разделимы по <span class="math inline">\(Z\)</span> в направленном ациклическом графе <span class="math inline">\(G\)</span>, то <span class="math inline">\(X\)</span> условно не зависит от <span class="math inline">\(Y\)</span> при заданных <span class="math inline">\(Z\)</span> при любом распределении совместимом с <span class="math inline">\(G\)</span></p>
+</section>
+<section id="причинные-баесовские-сети" class="level1">
+<h1>Причинные баесовские сети</h1>
 <p><strong>Баесовская причинная сеть</strong> - Пусть <span class="math inline">\(P(v)\)</span> вероятностное распределение для множества переменных <span class="math inline">\(V\)</span>, и пусть <span class="math inline">\(P_x(v)\)</span> обозначает распределение полученное в результате воздействия <span class="math inline">\(do(X=x)\)</span> которое приравнивает подмножество переменных <span class="math inline">\(X\)</span> к константам <span class="math inline">\(x\)</span>. Обозначим как <span class="math inline">\(P*\)</span> множество всех воздействий <span class="math inline">\(P_x(v), X \subseteq V\)</span> включая <span class="math inline">\(P(v)\)</span>, которое отображает отсутствие воздействий. Тогда DAG G можно назвать причинной Баесовской сетью совместимой с <span class="math inline">\(P*\)</span> тогда и только тогда, если для каждого <span class="math inline">\(P_x \in P*\)</span> выполняется:<br>
 * <span class="math inline">\(P_x(v)\)</span> сопоставима с G<br>
 * <span class="math inline">\(P_x(v_i)=1\)</span> для всех <span class="math inline">\(V_i \in X\)</span> когда <span class="math inline">\(v_i\)</span> согласуется с <span class="math inline">\(X = x\)</span><br>
 * <span class="math inline">\(P_x(v_i|pa_i)=P(v_i|pa_i)\)</span> для всех <span class="math inline">\(V_i \notin X\)</span> когда <span class="math inline">\(pa_i\)</span> согласуется с <span class="math inline">\(X = x\)</span>. т.е. каждый <span class="math inline">\(P(v_i|pa_i)\)</span> остается неизменен от воздействий не связанных с <span class="math inline">\(V_i\)</span></p>
+<p>Свойства: * для всеx <span class="math inline">\(i\)</span> <span class="math inline">\(P(v_i|pa_i)=P_{pa_i}(v_i)\)</span> * для всех <span class="math inline">\(i\)</span> и каждого подмножества <span class="math inline">\(S\)</span> переменных непересекающхся с <span class="math inline">\(\{V_i, PA_i\}\)</span> выполняется <span class="math inline">\(P_{pa_i,s}(v_i)=P_{pa_i}(v_i)\)</span></p>
+</section>
+<section id="причинные-функциональные-модели" class="level1">
+<h1>Причинные функциональные модели</h1>
+<p>В описанной выше Баесовской концепции все связи предполагаются строго стохастическими, следовательно описываемые системы сугубо вероятностны а детерминированное описание это соглашение дял удобства работы с такими системами. В противоположность Лаплас описывает свой детерминизм, согласно которому все законы строго опредеелны, а случайность возникает из-за того, что какие-то переменные остаются ненаблюдаемыми.</p>
+<p>В книге (напомню что это конспект) - отдается предпочтение квази-детерминизму Лапласа, по трем причинам:<br>
+* Это более общая концепция, каждая случайная система может быть описана множеством функциональх связей, но обратное неверно<br>
+* Эта концепция проще для человеческого восприятия<br>
+* Эта парадигма позволяет описать контрфакты, то есть рассуждения вида “веростность события B <strong>из-за</strong> наступления события A”</p>
+<p>В общем виде функциональная причинная модель состоит из множества уровнений вида <span class="math inline">\(x_i=\mathcal{f}(pa_i, u_i), i=1,...,n\)</span>, где:<br>
+* <span class="math inline">\(pa_i\)</span> - множество переменных, которые напрямую влияют на <span class="math inline">\(X_i\)</span><br>
+* <span class="math inline">\(U_i\)</span> - ошибки в оценках из-за пропущенных факторов<br>
+Это нелинейное и непараметрическое обобщение линейных структурных моделей (SEM): <span class="math inline">\(x_i=\sum_{k\neq1}(a_{ik}x_k + u_i)\)</span></p>
+<p>Есть 3 типа запросов, на которые хотим отвечать своими моделями:<br>
+* предсказания - что будет с Y, если мы узнаем, что X произошло<br>
+* воздействие - что будет с Y, если мы заставим X случиться<br>
+* контрфакт - что будет с Y, если X случится, хотя нам известно, что когда X не случается Y=2</p>
+<p><strong>Условие причинности Маркова</strong> - в корректной Марковской причинной модели каждая переменная <span class="math inline">\(X_i\)</span> независима от ее не потомков при заданных родительских нодах <span class="math inline">\(PA_i\)</span>. Это накладывает 2 предпосылки:<br>
+* полнота - мы должны включить в модель все переменные, которые влияют на 2 или больше переменных<br>
+* общая причина - если 2 переменных зависимы, то либо одна является причиной другой, либо есть третья, которая определяет обе предыдущие</p>
 
 
 </section>
