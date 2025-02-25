@@ -15,7 +15,7 @@
 <link>https://pavelbaboshkin.github.io/notes/</link>
 </image>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Fri, 21 Feb 2025 18:49:17 GMT</lastBuildDate>
+<lastBuildDate>Tue, 25 Feb 2025 19:56:24 GMT</lastBuildDate>
 <item>
   <title>Causality Judea Pearl</title>
   <link>https://pavelbaboshkin.github.io/notes/cources/causality_judea_pearl/</link>
@@ -41,9 +41,17 @@ Description
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="Y291cmNlcw==" data-listing-date-sort="1739826000000" data-listing-file-modified-sort="1740163719521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1268" data-listing-title-sort="Chapter 1. Introduction to Probabilities, Graphs, and Causal Models" data-listing-filename-sort="chapter_1.qmd">
+<tr data-index="0" data-categories="Y291cmNlcw==" data-listing-date-sort="1739826000000" data-listing-file-modified-sort="1740428717380" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1374" data-listing-title-sort="Chapter 1. Introduction to Probabilities, Graphs, and Causal Models" data-listing-filename-sort="chapter_1.qmd">
 <td>
 <a href="../../../notes/cources/causality_judea_pearl/chapter_1.html" class="title listing-title">Chapter 1. Introduction to Probabilities, Graphs, and Causal Models</a>
+</td>
+<td>
+<span class="listing-description">Вводная глава о базовых концепциях</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="Y291cmNlcw==" data-listing-date-sort="1740344400000" data-listing-file-modified-sort="1740513348994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-title-sort="Chapter 2. A Theory of Inferred Causation" data-listing-filename-sort="chapter_2.qmd">
+<td>
+<a href="../../../notes/cources/causality_judea_pearl/chapter_2.html" class="title listing-title">Chapter 2. A Theory of Inferred Causation</a>
 </td>
 <td>
 <span class="listing-description">Вводная глава о базовых концепциях</span>
@@ -56,7 +64,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://pavelbaboshkin.github.io/notes/cources/causality_judea_pearl/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
+  <pubDate>Tue, 25 Feb 2025 19:56:24 GMT</pubDate>
 </item>
 <item>
   <title>My essays</title>
@@ -83,12 +91,28 @@ Description
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="ZXNzYXklMkNBQiUyMHRlc3RpbmclMkNzdGF0aXN0aWNz" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1739732729212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1972" data-listing-title-sort="History of AB" data-listing-filename-sort="History of AB testing.qmd">
+<tr data-index="0" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1739653200000" data-listing-file-modified-sort="1739775125017" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="ChatGPT random generator" data-listing-filename-sort="ChatGPT random generator.ipynb">
+<td>
+<a href="../../notes/essays/ChatGPT random generator.html" class="title listing-title">ChatGPT random generator</a>
+</td>
+<td>
+<span class="listing-description">Насколько хорошо GPT генерирует случайные числа</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="ZXNzYXklMkNBQiUyMHRlc3RpbmclMkNzdGF0aXN0aWNz" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1739732729212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1972" data-listing-title-sort="History of AB" data-listing-filename-sort="History of AB testing.qmd">
 <td>
 <a href="../../notes/essays/History of AB testing.html" class="title listing-title">History of AB</a>
 </td>
 <td>
 <span class="listing-description">Видение того, как развивались и будут развиваться рандомизированные тесты</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1740258000000" data-listing-file-modified-sort="1740421202384" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="85" data-listing-title-sort="How to invent AB test" data-listing-filename-sort="How to invent AB test.ipynb">
+<td>
+<a href="../../notes/essays/How to invent AB test.html" class="title listing-title">How to invent AB test</a>
+</td>
+<td>
+<span class="listing-description">Как создать основы AB тестов с помощью монетки</span>
 </td>
 </tr>
 </tbody>
@@ -98,49 +122,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://pavelbaboshkin.github.io/notes/essays/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
-</item>
-<item>
-  <title>My researches</title>
-  <link>https://pavelbaboshkin.github.io/notes/research/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1739653200000" data-listing-file-modified-sort="1739775125017" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="ChatGPT random generator" data-listing-filename-sort="ChatGPT random generator.ipynb">
-<td>
-<a href="../../notes/research/ChatGPT random generator.html" class="title listing-title">ChatGPT random generator</a>
-</td>
-<td>
-<span class="listing-description">Насколько хорошо GPT генерирует случайные числа</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div> ]]></description>
-  <guid>https://pavelbaboshkin.github.io/notes/research/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
+  <pubDate>Tue, 25 Feb 2025 19:56:24 GMT</pubDate>
 </item>
 <item>
   <title>Notes on articles read</title>
@@ -174,7 +156,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://pavelbaboshkin.github.io/notes/articles/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
+  <pubDate>Tue, 25 Feb 2025 19:56:24 GMT</pubDate>
 </item>
 <item>
   <title>Notes on completed courses</title>
@@ -209,9 +191,17 @@ Description
 <span class="listing-description">Конспект курса причинно-следственного анализа из книги “Causality, models, reasoning, inference” - Judea Pearl</span>
 </td>
 </tr>
-<tr data-index="1" data-categories="Y291cmNlcw==" data-listing-date-sort="1739826000000" data-listing-file-modified-sort="1740163719521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1268" data-listing-title-sort="Chapter 1. Introduction to Probabilities, Graphs, and Causal Models" data-listing-filename-sort="chapter_1.qmd">
+<tr data-index="1" data-categories="Y291cmNlcw==" data-listing-date-sort="1739826000000" data-listing-file-modified-sort="1740428717380" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1374" data-listing-title-sort="Chapter 1. Introduction to Probabilities, Graphs, and Causal Models" data-listing-filename-sort="chapter_1.qmd">
 <td>
 <a href="../../notes/cources/causality_judea_pearl/chapter_1.html" class="title listing-title">Chapter 1. Introduction to Probabilities, Graphs, and Causal Models</a>
+</td>
+<td>
+<span class="listing-description">Вводная глава о базовых концепциях</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="Y291cmNlcw==" data-listing-date-sort="1740344400000" data-listing-file-modified-sort="1740513348994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-title-sort="Chapter 2. A Theory of Inferred Causation" data-listing-filename-sort="chapter_2.qmd">
+<td>
+<a href="../../notes/cources/causality_judea_pearl/chapter_2.html" class="title listing-title">Chapter 2. A Theory of Inferred Causation</a>
 </td>
 <td>
 <span class="listing-description">Вводная глава о базовых концепциях</span>
@@ -224,7 +214,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://pavelbaboshkin.github.io/notes/cources/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
+  <pubDate>Tue, 25 Feb 2025 19:56:24 GMT</pubDate>
 </item>
 <item>
   <title>Notes on non fiction book read</title>
@@ -314,7 +304,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://pavelbaboshkin.github.io/notes/books/</guid>
-  <pubDate>Fri, 21 Feb 2025 18:49:17 GMT</pubDate>
+  <pubDate>Tue, 25 Feb 2025 19:56:24 GMT</pubDate>
 </item>
 </channel>
 </rss>

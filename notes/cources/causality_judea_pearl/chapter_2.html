@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-08-12">
-<meta name="description" content="Автобиография одного из самых влиятельных людей в XVIII века">
+<meta name="dcterms.date" content="2025-02-24">
+<meta name="description" content="Вводная глава о базовых концепциях">
 
-<title>The Autobiography of Benjamin Franklin – Pablo Science</title>
+<title>Chapter 2. A Theory of Inferred Causation – Pablo Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../resources/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b916b7f198a76df60a000b13a3477f81.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-0202a8281d25de7a9b3f625c81eb5e8f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../resources/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-b916b7f198a76df60a000b13a3477f81.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-0202a8281d25de7a9b3f625c81eb5e8f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,11 +80,40 @@ gtag('js', new Date());
 gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../resources/styles.css">
-<meta property="og:title" content="The Autobiography of Benjamin Franklin – Pablo Science">
-<meta property="og:description" content="Автобиография одного из самых влиятельных людей в XVIII века">
-<meta property="og:image" content="https://pavelbaboshkin.github.io/notes/books/quarto.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../resources/styles.css">
+<meta property="og:title" content="Chapter 2. A Theory of Inferred Causation – Pablo Science">
+<meta property="og:description" content="Вводная глава о базовых концепциях">
+<meta property="og:image" content="https://pavelbaboshkin.github.io/notes/cources/causality_judea_pearl/quarto.png">
 <meta property="og:site_name" content="Pablo Science">
 </head>
 
@@ -96,11 +125,11 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../notes/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../notes/index.html" aria-current="page"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,7 +149,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Notes on non fiction book read</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Autobiography of Benjamin Franklin.html">The Autobiography of Benjamin Franklin</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/index.html">Notes on completed courses</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/causality_judea_pearl/index.html">Causality Judea Pearl</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/causality_judea_pearl/chapter_2.html">Chapter 2. A Theory of Inferred Causation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,7 +163,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../notes/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📚 Pablo Notes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -143,13 +172,13 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/articles/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/articles/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notes on articles read</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/essays/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../notes/essays/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">My essays</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -158,19 +187,19 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/essays/ChatGPT random generator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/essays/ChatGPT random generator.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT random generator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/essays/History of AB testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/essays/History of AB testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">History of AB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/essays/How to invent AB test.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/essays/How to invent AB test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to invent AB test</span></a>
   </div>
 </li>
@@ -178,31 +207,31 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/cources/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../notes/cources/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notes on completed courses</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/cources/causality_judea_pearl/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../notes/cources/causality_judea_pearl/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Causality Judea Pearl</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/cources/causality_judea_pearl/chapter_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/cources/causality_judea_pearl/chapter_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 1. Introduction to Probabilities, Graphs, and Causal Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/cources/causality_judea_pearl/chapter_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/cources/causality_judea_pearl/chapter_2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 2. A Theory of Inferred Causation</span></a>
   </div>
 </li>
@@ -212,52 +241,52 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/books/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../notes/books/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notes on non fiction book read</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/Agent of Influence by Janson Hanson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/Agent of Influence by Janson Hanson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Agent of Influence by Janson Hanson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/Data for the People by Andreas Wiegend.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/Data for the People by Andreas Wiegend.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data for the People by Andreas Wiegend</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/Games People Play by Eric Berne.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/Games People Play by Eric Berne.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Games People Play by Eric Berne</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/How to see George Nelson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/How to see George Nelson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to see George Nelson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/Summa Technologiae by Stanislaw Lem.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/Summa Technologiae by Stanislaw Lem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summa Technologiae by Stanislaw Lem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/The Autobiography of Benjamin Franklin.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../notes/books/The Autobiography of Benjamin Franklin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Autobiography of Benjamin Franklin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/books/The Road to Serfdom by Friedrich Hayek.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../notes/books/The Road to Serfdom by Friedrich Hayek.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Road to Serfdom by Friedrich Hayek</span></a>
   </div>
 </li>
@@ -270,23 +299,33 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#базовые-идеи" id="toc-базовые-идеи" class="nav-link active" data-scroll-target="#базовые-идеи">Базовые идеи</a>
+  <ul class="collapse">
+  <li><a href="#фреймворк" id="toc-фреймворк" class="nav-link" data-scroll-target="#фреймворк">Фреймворк</a></li>
+  <li><a href="#выбор-моделей" id="toc-выбор-моделей" class="nav-link" data-scroll-target="#выбор-моделей">Выбор моделей</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../notes/books/index.html">Notes on non fiction book read</a></li><li class="breadcrumb-item"><a href="../../notes/books/The Autobiography of Benjamin Franklin.html">The Autobiography of Benjamin Franklin</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../notes/index.html">📚 Pablo Notes</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/index.html">Notes on completed courses</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/causality_judea_pearl/index.html">Causality Judea Pearl</a></li><li class="breadcrumb-item"><a href="../../../notes/cources/causality_judea_pearl/chapter_2.html">Chapter 2. A Theory of Inferred Causation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Autobiography of Benjamin Franklin</h1>
+<h1 class="title">Chapter 2. A Theory of Inferred Causation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">books</div>
+    <div class="quarto-category">cources</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Автобиография одного из самых влиятельных людей в XVIII века
+    Вводная глава о базовых концепциях
   </div>
 </div>
 
@@ -297,7 +336,7 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 12, 2024</p>
+      <p class="date">February 24, 2025</p>
     </div>
   </div>
   
@@ -309,58 +348,25 @@ gtag('config', 'G-JJNXYRZ5C4', { 'anonymize_ip': true});
 </header>
 
 
-<p>Бенджамин Франклин – человек, который сам, с помощью упорной работы и следования своим принципам стал одним из самых влиятельных людей своего века. Его автобиография мне показалась двойственной. С одной стороны, похоже на попытку подробно описать интересные события из своей жизни, а с другой – рефлексия уже очень взрослого человека о том, как и почему он смог прийти к тому, что имеет.</p>
-<p>Вот сторона с анализом причин меня наиболее и заинтересовала. Если коротко, то все дело в том, чтобы быть честным и трудолюбивым, поставить себе цели и неотступно следовать им. Более подробное раскрытие темы приведу в формате выдержек и комментариев.</p>
-<blockquote class="blockquote">
-<p>…Зато писание прозы весьма пригодилось мне и помогло продвинуться в жизни</p>
-</blockquote>
-<p>Это скоре контекстная фраза к тому, что Франклин считал навык письма очень важным в жизни. Даже предлагает свою методу его развития – записывать по памяти прочитанные произведения, причем не просто стараясь запоминать, а развивая идеи в том же духе, как это делал автор и пытаясь подбирать лучшие слова и выражения для этого.</p>
-<blockquote class="blockquote">
-<p>Когда у человека мало денег, он бывает щедрее, нежели когда имеет их много, – поэтому, возможно, что боится, как бы его не приняли за бедняка.</p>
-</blockquote>
-<p>Для себя так и не решил можно ли однозначно отнести описанное явление к положительному ил инегативному. С одной стороны, логично при низком бюджете активнее сберегать, дабы бюджет рос. Но с другой стороны, в такой ситуации требуется не постепенный, а скачкообразный рост, который возможен при бОльшем риске, а следовательно и тратах.</p>
-<blockquote class="blockquote">
-<p>Разум всегда подскажет оправдания для любого поступка, который нам хочется совершить</p>
-</blockquote>
-<p>Посему надо уметь распознавать истинные желания своей личности от мимолетных облегчающих подсказок от разума, которые жертвуют желаемым ради простоты существования.</p>
-<blockquote class="blockquote">
-<p>Это тоже было одной из серьезных ошибок в моей жизни</p>
-</blockquote>
-<p>Не информативная по тексту фраза, но важная для смысла. Так, Франклин несколько раз указывал на какие-то свои глобальные промахи в работе и отношениях с людьми. Отсюда два главных вывода: как минимум, надо рефлексировать и искать события/действия наиболее нас формирующие, а вообще полезно еще и стараться исправить негативные поступки, сколь бы давними они ни были.</p>
-<blockquote class="blockquote">
-<ol type="1">
-<li>Мне необходимо соблюдать крайнюю бережливость – некоторое время, пока я не расплачусь со своими долгами</li>
-<li>Стремиться неизменного говорить правду, ни в коого не вселяя надежд, кои едва ли смогу оправдать, но быть искренним в каждом моем слове и поступке</li>
-<li>Прилежно заниматься любым делом, за какое возьмусь, не отвлекаясь от него легкомысленной погоне за быстрым обогащению, ибо вернейший путь к преуспению лежит через трудолюбие и терпение</li>
-<li>Я обязуюсь ни о ком не отзываться дурно, даже с целью установить истину, но искать оправданий для поступок, в которых обвиняют людей, и пользоваться всяким случаем, чтобы говорить о человеке все то доброе, что я о нем знаю.</li>
-</ol>
-</blockquote>
-<p>То о чем писал в начале, простые принципы, которые надо себе составлять для достижения нового. Конкретно эти были описаны в контексте, когда молодой Франклин вернулся из Лондона в Филадельфию и вступил в новый этап своей жизни.</p>
-<blockquote class="blockquote">
-<p>Я пришел к убеждению, что главные условия для счастья в жизни – это правдивость, искренность и честность в отношениях между людьми;</p>
-</blockquote>
-<p>Думаю не стоит 1 в 1 принимать чужой вывод об условиях для счастья, но как минимум попробовать сформулировать свои – может быть полезно.</p>
-<blockquote class="blockquote">
-<p>… невыгодно называть себя застрельщиком любого полезного начинания, ведь его сразу заподозрят в том, что он ставит себя хоть немножечко да выше людей, его окружающих</p>
-</blockquote>
-<p>Совет из области деловых лайфхаков, которые, как минимум, стоит попробовать. Суть в том, что если надо продать какую-то свою идею представляете её как коллективную, в которой вы лишь представитель.</p>
-<blockquote class="blockquote">
-<p>[о пасторе]… он не призывал к соблюдению каких-либо нравственных правил и, казалось, старался сделать нас не достойными гражданами, а всего лишь пресвитерианами.</p>
-</blockquote>
-<p>Кажется это полезно помнить в любой сфере, где один человек выполняет функцию учения для других – религия, преподавание, наставничество и т.п. Главное в таких вопросах – глубинное содержание, а не форма.</p>
-<p>Франклин предлагает свою систему по выработке привычек, которые он считал наиболее важными, а именно: Воздержанность, Молчаливость, Аккуратность, Решительность, Бережливость, Трудолюбие, Искренность, Справедливость, Умеренность, Чистоплотность, Спокойствие, Целомудрие, Кротость</p>
-<p>Подробнее об этом уже много где хорошо написали, <a href="https://vc.ru/u/2230579-kirill-david-razvit-biznes/885986-metod-franklina-sekret-effektivnogo-formirovaniya-privychek">например</a></p>
-<blockquote class="blockquote">
-<p>Тот, кто один раз оказал тебе услугу, скорее окажет тебе и другую, нежели тот, кому ты сам услужил</p>
-</blockquote>
-<p>Такой психологический эффект даже стал называться <a href="https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%91%D0%B5%D0%BD%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BD%D0%B0_%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD%D0%B0#:~:text=%D0%94%D1%80%D1%83%D0%B3%D0%B8%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8%2C%20%C2%AB%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%20%D0%91%D0%B5%D0%BD%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BD%D0%B0%20%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD%D0%B0,%2C%20%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D1%83%D1%8E%D1%82%D1%81%D1%8F%2C%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%82%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F%C2%BB.">эффектом Бенджамина Франклина</a>. Забавно, что у него есть и обратный, когда мы начинаем ненавидеть того, кому причинили зло, дабы оправдать в своих глазах этот поступок.</p>
-<blockquote class="blockquote">
-<p>Советую вам в первую очередь обратиться к тем, в чьей поддержке вы уверены; потом к тем, в которых вы сомневаетесь дадут ли они что-нибудь или нет, и показывайте им список тех, кто уже что-то дал; и, наконец, не пренебрегайте и теми, от которых никаких не ждете поддержки ибо в отношении некоторых из них вы могли ошибаться.</p>
-</blockquote>
-<p>Чисто гайд по фандрайзу.</p>
-<p>Штош, “время-деньги” освоена, чтиво занимательное, на 100 долларов мимоходом не попасть.</p>
+<section id="базовые-идеи" class="level1">
+<h1>Базовые идеи</h1>
+<section id="фреймворк" class="level2">
+<h2 class="anchored" data-anchor-id="фреймворк">Фреймворк</h2>
+<p><strong>Причинная структура</strong> - для множества переменных <span class="math inline">\(V\)</span> это направленный ациклический граф в котором ноды соответствуют элементам множества <span class="math inline">\(V\)</span> и каждая связь представляет прямую функциональную связь переменных</p>
+<p><strong>Причинная модель</strong> - это пара <span class="math inline">\(&lt;D, \theta_D&gt;\)</span> состоящая из причинной структуры <span class="math inline">\(D\)</span> и множества параметров <span class="math inline">\(\theta_D\)</span> сопоставимых с <span class="math inline">\(D\)</span>. Параметры <span class="math inline">\(\theta_D\)</span> определяют функции <span class="math inline">\(x_i=\mathcal{F(pa_i, u_i)}\)</span> для каждого <span class="math inline">\(X_i\in V\)</span> и распределение вероятности <span class="math inline">\(P(u_i)\)</span> для каждого <span class="math inline">\(u_i\)</span>, где <span class="math inline">\(PA_i\)</span> родительская нода <span class="math inline">\(X_i\)</span> в <span class="math inline">\(D\)</span> и <span class="math inline">\(U_i\)</span> случайный шум распределенный согласно <span class="math inline">\(P(u_i)\)</span> независимо от всех остальных <span class="math inline">\(u\)</span></p>
+</section>
+<section id="выбор-моделей" class="level2">
+<h2 class="anchored" data-anchor-id="выбор-моделей">Выбор моделей</h2>
+<p><strong>Пердполагаемая причинность (предварительная)</strong> - Переменная <span class="math inline">\(X\)</span> влияет на <span class="math inline">\(Y\)</span> если направленный путь существует от <span class="math inline">\(X\)</span> к <span class="math inline">\(Y\)</span> в каждой минимальной структуре согласующеся с данными</p>
+<p><strong>Латентная структура</strong> - это пара <span class="math inline">\(L=&lt;D, O&gt;\)</span> где <span class="math inline">\(D\)</span> это причинная структура на переменных <span class="math inline">\(V\)</span> и <span class="math inline">\(O \in V\)</span> это множество наблюдаемых переменных</p>
+<p><strong>Предпочтение структуры</strong> - латентная структура <span class="math inline">\(L=&lt;D, O&gt;\)</span> предпочитаема другой <span class="math inline">\(L'=&lt;D', O'&gt;\)</span> (<span class="math inline">\(L \preccurlyeq L'\)</span>) если <span class="math inline">\(D'\)</span> для каждого <span class="math inline">\(\theta_D\)</span> существует <span class="math inline">\(\theta_D'\)</span> такой что <span class="math inline">\(P_[O](&lt;D', \theta_D'&gt;)=P_[O](&lt;D, \theta_D&gt;)\)</span>. Две структуры эквивалентны если <span class="math inline">\(L \preccurlyeq L'\)</span> и <span class="math inline">\(L' \preccurlyeq L\)</span></p>
+<p><strong>Минимальность</strong> - латентная структура <span class="math inline">\(L\)</span> минимальна для класса структур <span class="math inline">\(\mathcal{L}\)</span> если не существует другого элемента в <span class="math inline">\(\mathcal{L}\)</span> который строго предпочитаем <span class="math inline">\(L\)</span></p>
+<p><strong>Консистентность</strong> - латентная структура <span class="math inline">\(L=&lt;D, O&gt;\)</span> сопоставима распределению <span class="math inline">\(\hat{P}\)</span> для переменных <span class="math inline">\(O\)</span> если в <span class="math inline">\(D\)</span> есть модели порождающие <span class="math inline">\(\hat{P}\)</span>, то есть существует параметризация <span class="math inline">\(\theta_D\)</span> такая что <span class="math inline">\(P_{[O]}(&lt;D, \theta_D&gt;)=\hat{P}\)</span></p>
+<p><strong>Предполагаемая причинность</strong> - при заданной <span class="math inline">\(\hat{P}\)</span> переменная <span class="math inline">\(C\)</span> влияет на <span class="math inline">\(E\)</span> тогда и только тогда если существует прямой путь от <span class="math inline">\(C\)</span> к <span class="math inline">\(E\)</span> в каждой минималльной латентной структуре консистентной с <span class="math inline">\(\hat{P}\)</span></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
