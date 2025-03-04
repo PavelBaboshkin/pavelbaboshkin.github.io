@@ -1,6 +1,69 @@
 ---
 id: cv
-title: Pavel Baboshkin CV
+title: Pavel Baboshkin
 ---
 
-Резюме
+## Summary
+A brief introduction about yourself, highlighting your skills and professional philosophy.
+
+## Work Experience
+
+### Magnit Tech
+**Team Lead Data Analyst - Strategic Reserch**  
+*Sept. 2024 - Present*
+
+- 
+- Управление командой из 4 человек
+- 
+
+### VkusVill
+**Senior Data Analyst - Communications**  
+*Oct. 2023 - Aug. 2024*
+
+- Some shit
+
+### Raiffesien Bank 
+**Data Analyst - Data Platform**  
+*Jan. 2022 - Sept. 2023*
+
+- Some shit
+
+### FA & Thomson Reuters
+**Research Analyst - Financial Markets**  
+*Jan. 2020 - Dec. 2022*
+
+- Some shit
+
+
+## Personal Projects
+**Research Analyst - Financial Markets**  
+*Jan. 2020 - Dec. 2022*
+
+## Education
+
+### НИУ ВШЭ
+**ФКН: Магистр по наукам о данных**  
+*2023 - 2025*
+
+- ВКР - Анализ CJM пользователя для оптимизации мобильных приложений
+- GPA 9.1/10
+
+### London School of Economics
+**Экономика и финансы**  
+*2019 - 2023*  
+
+- Основной трек - финансовая математика, исследовательский проект - анализ маркетмейкеров на криптовалютном рынке  
+- GPA 4.3/5  
+
+### Финансовый университет при Правительстве РФ
+**Финтех**  
+*2019 - 2023*  
+
+- ВКР в форме стартапа, проект - прогнозная аналитика продаж на маркетплейсах  
+- GPA 94.2/100  
+
+## Skills
+- SQL - clickhouse, greenplum
+- Python - sklearn, pytorch, catboost, pandas, numpy 
+- Data Analysis - user event stream analysis, user segmentation, AB testing, causal inference
+- Reporting - PowerBI, Yandex Data Lens
