@@ -13,9 +13,10 @@ listing:
   sort: "date desc"
   id: blog-listings
   contents:
-    - 'notes/**/*.[qmd, ipynb]'  # Включает все .qmd и .ipynb файлы
     - 'notes/**/!(*index*.*)'
-    - 'notes/**/!*.yml'   # Исключает yml файлы
+    - 'notes/**/*.[qmd, ipynb]'
+    - 'notes/**/!*.yml'
+    - '!notes/competitions/data/*'
   feed: true
 aliases: ["blog/", ]
 format:
