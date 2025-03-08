@@ -2,3 +2,5 @@
 _site
 .venv
 /notes/competitions/data
+/notes/essays/data
+*.DS_store

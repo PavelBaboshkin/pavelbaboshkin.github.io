@@ -17,6 +17,7 @@ listing:
     - 'notes/**/*.[qmd, ipynb]'
     - 'notes/**/!*.yml'
     - '!notes/competitions/data/*'
+    - '!essays/competitions/data/*'
   feed: true
 aliases: ["blog/", ]
 format:
