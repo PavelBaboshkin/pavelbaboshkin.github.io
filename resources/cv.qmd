@@ -4,7 +4,8 @@ title: Pavel Baboshkin
 ---
 
 ## Summary
-A brief introduction about yourself, highlighting your skills and professional philosophy.
+
+Увлекаюсь продвинутым анализом данных и ищу в нем вдохновение для решения бизнес задач, называю это Product science. Успешно занимаюсь этим уже 5 лет и уверен что дальше больше) 
 
 ## Work Experience
 
@@ -12,32 +13,39 @@ A brief introduction about yourself, highlighting your skills and professional p
 **Team Lead Data Analyst - Strategic Reserch**  
 *Sept. 2024 - Present*
 
-- 
-- Управление командой из 4 человек
-- 
+- Развитие команды из 3 человек
+- Построение аналитики и отчетности в мобильном приложении
 
 ### VkusVill
 **Senior Data Analyst - Communications**  
 *Oct. 2023 - Aug. 2024*
 
-- Some shit
+- Создал систему отчетности продукта коммуникаций
+- Проводил полный цикл AB от формулировки гипотез до анализа и рекомендаций по принятию решений
+- Искал точки роста в мобильном приложении
 
 ### Raiffesien Bank 
 **Data Analyst - Data Platform**  
 *Jan. 2022 - Sept. 2023*
 
-- Some shit
+- Создал руководство по разработке отчетов, что ускорило разработку PBI отчетов на 20%
+- Разработал методику оценки BI отчетности, для KPI продуктовых команд.
+- Настроил 3 системы отчетности для 1000+ пользователей из доменов: HR, Data, Management
 
 ### FA & Thomson Reuters
 **Research Analyst - Financial Markets**  
-*Jan. 2020 - Dec. 2022*
+*Sept. 2020 - Dec. 2022*
 
-- Some shit
-
+- Ускорил EDA на 40%
+- Создал систему контроля качества данных
+- Опубликовал 3 статьи в Q1-Q2
 
 ## Personal Projects
-**Research Analyst - Financial Markets**  
-*Jan. 2020 - Dec. 2022*
+
+- *Winter 2024* [LeadFinder](https://t.me/FindMeLeads_bot) - Создал tg бот для поиска клиентов в телеграм
+- *Autumn 2023 - Present* Веду блог об аналитике и IT проектах - [телеграм](https://t.me/PavelBaboshkin_channel), [сайт](https://pavelbaboshkin.github.io/)
+- *Winter 2023* KazTech – Создал BI платформу с предиктивной аналитикой грузоперевозок KZ
+- *Summer 2021* Largo – Написал TG бот для аналитики портфеля, в пике 1к пользователей MAU
 
 ## Education
 

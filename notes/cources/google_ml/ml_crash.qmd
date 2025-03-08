@@ -1,6 +1,6 @@
 ---
 title: ML Base
-description: Осважаем базу
+description: Освежаем базу
 date: "2025-03-07"
 categories: [cources]
 ---

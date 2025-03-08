@@ -13,11 +13,10 @@ listing:
   sort: "date desc"
   id: blog-listings
   contents:
-    - 'notes/**/!(*index*.*)'
-    - 'notes/**/*.[qmd, ipynb]'
-    - 'notes/**/!*.yml'
-    - '!notes/competitions/data/*'
-    - '!essays/competitions/data/*'
+    - '!notes/**/index.qmd'
+    - '!notes/index.qmd'
+    - 'notes/**/*.qmd'
+    - 'notes/**/*.ipynb'
   feed: true
 aliases: ["blog/", ]
 format:
