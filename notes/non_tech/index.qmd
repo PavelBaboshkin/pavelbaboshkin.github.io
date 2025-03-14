@@ -1,0 +1,5 @@
+---
+title: Notes on about anything
+description: Заметки по всему что не в tech
+metadata-files: ["../_listing_meta.yml"]
+---

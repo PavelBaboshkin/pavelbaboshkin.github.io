@@ -1,0 +1,13 @@
+---
+title: Sequential analysis A. Wald
+description: Конспект книги одного из авторов идей последовательного тестирования
+date: "2025-03-14"
+categories: [cources]
+---
+
+[Ссылка на книгу](https://books.google.ru/books?id=oVYDHHzZtdIC&printsec=copyright&redir_esc=y#v=onepage&q&f=false)
+
+# General Theory
+
+## 
+

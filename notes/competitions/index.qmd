@@ -1,5 +1,0 @@
----
-title: Hackathons and competitions materials
-description: Заметки по участию в хакатонах и соревнованиях
-metadata-files: ["../_listing_meta.yml"]
----
