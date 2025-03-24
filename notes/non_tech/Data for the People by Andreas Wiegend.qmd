@@ -1,6 +1,6 @@
 ---
 title: Data for the People by Andreas Wiegend
-description: Немного страшилок, немного предложений по теме упраления данными людей
+description: Немного страшилок, немного предложений по теме управления данными людей
 date: "2024-07-23"
 categories: [books]
 ---
