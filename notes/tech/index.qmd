@@ -1,5 +1,0 @@
----
-title: Notes on DS/ML/AI
-description: Заметки по всему техническому
-metadata-files: ["../_listing_meta.yml"]
----

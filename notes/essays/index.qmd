@@ -1,5 +1,0 @@
----
-title: My essays
-description: Мои мысли на любую тему в форме эссе или около того
-metadata-files: ["../_listing_meta.yml"]
----

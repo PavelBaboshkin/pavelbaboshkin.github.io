@@ -1,5 +1,0 @@
----
-title: Cource. Google ML
-description: ML курсы от гугла https://developers.google.com/machine-learning/
-metadata-files: ["../../_listing_meta.yml"]
----
