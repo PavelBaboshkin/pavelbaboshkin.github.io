@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Павел Бабошкин</title>
+    <title data-title-ru="Павел Бабошкин" data-title-en="Pavel Baboshkin">Павел Бабошкин</title>
     <link rel="shortcut icon" href="tab_icon.png" />
     <meta name="description" content="Product Data Scientist" />
-    <meta property="og:title" content="Павел Бабошкин" />
+    <meta property="og:title" content="Павел Бабошкин" data-title-ru="Павел Бабошкин" data-title-en="Pavel Baboshkin" />
     <meta property="og:description" content="Product Data Scientist" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pavelbaboshkin.github.io/" />
@@ -42,13 +42,46 @@
     
 </head>
 
-<body>
+<body data-lang="ru">
     <div class="wrap">
         <aside>
-            <img class="photo" src="photo.jpg" alt="Это я" loading="lazy" />
-            <div class="name">Павел Бабошкин</div>
-            <div class="role">Entrepreneur / Data analyst </div>
-            <ul class="contacts" aria-label="Контакты">
+            <div class="controls">
+                <div class="lang-toggle" role="group" aria-label="Language">
+                    <button class="chip is-active" type="button" data-set-lang="ru">RU</button>
+                    <button class="chip" type="button" data-set-lang="en">EN</button>
+                </div>
+                <button class="chip" type="button" id="pdfButton">
+                    <span class="lang lang-ru inline">Скачать PDF</span>
+                    <span class="lang lang-en inline">Download PDF</span>
+                </button>
+            </div>
+            <img class="photo" src="photo.jpg" alt="Это я" data-alt-ru="Это я" data-alt-en="Me" loading="lazy" />
+            <div class="name">
+                <span class="lang lang-ru inline">Павел Бабошкин</span>
+                <span class="lang lang-en inline">Pavel Baboshkin</span>
+            </div>
+            <div class="role">
+                <span class="lang lang-ru inline">Предприниматель / Data analyst</span>
+                <span class="lang lang-en inline">Entrepreneur / Data analyst</span>
+            </div>
+            <ul class="contacts lang lang-ru" aria-label="Контакты">
+                <li>
+                    <a href="mailto:pbaboshkin@yandex.ru">
+                        <span class="icon">✉️</span> <span>pbaboshkin@yandex.ru</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/PavelBaboshkin" target="_blank" rel="noopener">
+                        <span class="icon">💬</span> <span>Telegram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/pavel-baboshkin-301674221/" target="_blank" rel="noopener">
+                        <span class="icon">🔗</span> <span>LinkedIn</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="contacts lang lang-en" aria-label="Contacts">
                 <li>
                     <a href="mailto:pbaboshkin@yandex.ru">
                         <span class="icon">✉️</span> <span>pbaboshkin@yandex.ru</span>
@@ -69,101 +102,182 @@
 
         <main>
             <section id="about">
-                <h2>Обо мне</h2>
-                <p>
-                    Работаю на стыке продуктовой и маркетинговой аналитики. 
-                    Помогаю компаниям растить эффективность с помощью данных. 
-                    Исследую causal artificial intelligence. 
+                <h2 class="lang lang-ru">Обо мне</h2>
+                <h2 class="lang lang-en">About</h2>
+                <p class="lang lang-ru">
+                    Работаю на стыке продуктовой и маркетинговой аналитики. Помогаю компаниям
+                    растить эффективность с помощью данных. Исследую causal artificial intelligence.
+                </p>
+                <p class="lang lang-en">
+                    I work at the intersection of product and marketing analytics, helping companies
+                    grow efficiency through data. I research causal artificial intelligence.
                 </p>
             </section>
 
             <section id="projects">
-                <h2>Мои проекты</h2>
-                <ul class="list">
-
+                <h2 class="lang lang-ru">Мои проекты</h2>
+                <h2 class="lang lang-en">Projects</h2>
+                <ul class="list lang lang-ru">
                     <li class="item">
                         <div class="project-title">
                             <a href="https://telegarek.ru/" target="_blank" rel="noopener">
                                 Telegarek
                             </a>
                         </div>
-                        <div class="meta">Сервис поиска и аналитики тг каналов</div>
+                        <div class="meta">Поиск и аналитика Telegram-каналов для маркетинга и медиа.</div>
                     </li>
-
                     <li class="item">
                         <div class="project-title">
                             <a href="https://github.com/PavelBaboshkin/ProductAnalyticsInterview" target="_blank" rel="noopener">
                                 Product Analytics Interview
                             </a>
                         </div>
-                        <div class="meta">Материалы для подготовки продуктовым аналитикам
-                        </div>
+                        <div class="meta">Практические материалы и вопросы для интервью продуктовых аналитиков.</div>
                     </li>
-
                     <li class="item">
                         <div class="project-title">
                             <a href="https://getmentor.dev/mentor/pavel-baboshkin-5261" target="_blank" rel="noopener">
                                 Ментор
                             </a>
                         </div>
-                        <div class="meta">Помогу аналитикам развивать карьеру, а компаниям отвечать на сложные вопросы.
-                        </div>
+                        <div class="meta">Помогаю аналитикам развивать карьеру, а компаниям отвечать на сложные вопросы.</div>
                     </li>
-                
+                </ul>
+                <ul class="list lang lang-en">
+                    <li class="item">
+                        <div class="project-title">
+                            <a href="https://telegarek.ru/" target="_blank" rel="noopener">
+                                Telegarek
+                            </a>
+                        </div>
+                        <div class="meta">Search and analytics for Telegram channels for marketing and media.</div>
+                    </li>
+                    <li class="item">
+                        <div class="project-title">
+                            <a href="https://github.com/PavelBaboshkin/ProductAnalyticsInterview" target="_blank" rel="noopener">
+                                Product Analytics Interview
+                            </a>
+                        </div>
+                        <div class="meta">Practical materials and interview questions for product analysts.</div>
+                    </li>
+                    <li class="item">
+                        <div class="project-title">
+                            <a href="https://getmentor.dev/mentor/pavel-baboshkin-5261" target="_blank" rel="noopener">
+                                Mentor
+                            </a>
+                        </div>
+                        <div class="meta">I help analysts grow their careers and teams answer complex questions.</div>
+                    </li>
                 </ul>
             </section>
 
             <section id="experience">
-                <h2>Опыт работы</h2>
-                <ul class="list">
+                <h2 class="lang lang-ru">Опыт работы</h2>
+                <h2 class="lang lang-en">Experience</h2>
+                <ul class="list lang lang-ru">
                     <li class="item">
                         <strong>Senior Analyst</strong> — Avito • 2025 - н.в.
                         <div class="meta">
-                            Разрабатываю алгоритмы оптимальной отправки уведомлений на пользователя
+                            <ul>
+                                <li>Разрабатываю алгоритмы оптимальной отправки уведомлений пользователям.</li>
+                                <li>Сформировал методологии A/B‑тестов, повысив чувствительность на малых сегментах на 25%.</li>
+                                <li>Разработал подход к оценке эффекта продукта, обеспечив надежную оценку продуктовых инициатив.</li>
+                                <li>Запустил MVP платформы uplift‑моделирования для CRM‑рассылок, давшей +3% в целевых метриках.</li>
+                            </ul>
                         </div>
                     </li>
-
                     <li class="item">
                         <strong>Team Lead Data Analyst</strong> — Magnit Tech • 2024 - 2025
                         <div class="meta">
                             <ul>
-                                <li>Построил систему верхнеуровневой отчетности мобильного приложения, которая используется многими командами и репортится для C-level</li>
-                                <li>Провел значимые исследования, которые повлияли на работу с CVM и привлечением аудитории в приложение</li>
-                                <li>Управлял командой из 3 человек, включая сбор и распределение задач, ревью итогов, развитие сотрудников</li>
+                                <li>Запустил систему executive-отчетности мобильного приложения для C-level и команд.</li>
+                                <li>Провел исследования, повлиявшие на CVM и привлечение аудитории в приложение.</li>
+                                <li>Руководил командой из 3 аналитиков: планирование задач, ревью и развитие.</li>
                             </ul>
                         </div>
                     </li>
-
                     <li class="item">
                         <strong>Senior Data Analyst</strong> — VkusVill • 2023 - 2024
                         <div class="meta">
                             <ul>
-                                <li>Провел цикл исследований поведения аудитории в котором доказал ряд идей легших в основу направления онбординга новичков</li>
-                                <li>Предложил и реализовал MVP баннерных рекомендации на основе многоруких бандитов, по итогу ключевая метрика теста выросла на 5% и решение взяли в продуктовую разработку</li>
-                                <li>Создал систему отчетности продукта коммуникаций</li>
-                                <li>Провел 10+ AB полного цикла от формирования гипотез до анализа результата и рекомендаций</li>
+                                <li>Провел исследования поведения аудитории, легшие в основу онбординга новичков.</li>
+                                <li>Реализовал MVP баннерных рекомендаций на многоруких бандитах; +5% к ключевой метрике.</li>
+                                <li>Построил систему отчетности для продукта коммуникаций.</li>
+                                <li>Провел 10+ A/B‑тестов полного цикла: гипотезы, анализ, рекомендации.</li>
                             </ul>
                         </div>
                     </li>
-        
                     <li class="item">
-                        <strong>Data Analyst</strong> — Raiffesien Bank • 2021 - 2023
+                        <strong>Data Analyst</strong> — Raiffeisen Bank • 2021 - 2023
                         <div class="meta">
                             <ul>
-                                <li>Создал руководство по разработке отчетов, что ускорило разработку PBI отчетов на 20%</li>
-                                <li>Разработал методику оценки BI отчетности, для KPI продуктовых команд.</li>
-                                <li>Настроил 3 системы отчетности для 1000+ пользователей из доменов: HR, Data, Management</li>
+                                <li>Создал руководство по разработке отчетов; скорость сборки PBI выросла на 20%.</li>
+                                <li>Разработал методику оценки BI‑отчетности для KPI продуктовых команд.</li>
+                                <li>Настроил 3 системы отчетности для 1000+ пользователей: HR, Data, Management.</li>
                             </ul>
                         </div>
                     </li>
-
                     <li class="item">
                         <strong>Research Scientist</strong> — FA & Thomson Reuters • 2020 - 2023
                         <div class="meta">
                             <ul>
-                                <li>Ускорил EDA на 40%</li>
-                                <li>Создал систему контроля качества данных</li>
-                                <li>Опубликовал 3 статьи в Q1-Q2</li>
+                                <li>Ускорил EDA на 40% за счет автоматизации и шаблонов анализа.</li>
+                                <li>Создал систему контроля качества данных.</li>
+                                <li>Опубликовал 3 статьи в Q1–Q2 журналах.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list lang lang-en">
+                    <li class="item">
+                        <strong>Senior Analyst</strong> — Avito • 2025 - present
+                        <div class="meta">
+                            <ul>
+                                <li>Design notification delivery algorithms to optimize user outreach.</li>
+                                <li>Built A/B testing methodologies, improving small-segment sensitivity by 25%.</li>
+                                <li>Developed a product-level impact evaluation approach for reliable initiative ROI.</li>
+                                <li>Launched an uplift modeling MVP for CRM campaigns, delivering +3% on target metrics.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <strong>Team Lead Data Analyst</strong> — Magnit Tech • 2024 - 2025
+                        <div class="meta">
+                            <ul>
+                                <li>Delivered executive reporting for the mobile app used by C-level and teams.</li>
+                                <li>Led research that influenced CVM strategy and audience acquisition.</li>
+                                <li>Managed a team of 3 analysts: planning, reviews, and growth.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <strong>Senior Data Analyst</strong> — VkusVill • 2023 - 2024
+                        <div class="meta">
+                            <ul>
+                                <li>Drove audience research that shaped the new-user onboarding direction.</li>
+                                <li>Built a multi-armed bandit banner-recommendation MVP; +5% key metric uplift.</li>
+                                <li>Created a reporting system for the communications product.</li>
+                                <li>Ran 10+ end-to-end A/B tests from hypothesis to recommendations.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <strong>Data Analyst</strong> — Raiffeisen Bank • 2021 - 2023
+                        <div class="meta">
+                            <ul>
+                                <li>Authored reporting guidelines, cutting PBI report delivery time by 20%.</li>
+                                <li>Designed BI reporting evaluation methodology for product team KPIs.</li>
+                                <li>Built 3 reporting systems for 1000+ users across HR, Data, and Management.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <strong>Research Scientist</strong> — FA & Thomson Reuters • 2020 - 2023
+                        <div class="meta">
+                            <ul>
+                                <li>Accelerated EDA by 40% through automation and reusable templates.</li>
+                                <li>Built a data quality control system.</li>
+                                <li>Published 3 papers in Q1–Q2 journals.</li>
                             </ul>
                         </div>
                     </li>
@@ -171,19 +285,34 @@
             </section>
 
             <section id="education">
-                <h2>Образование</h2>
-                <ul class="list">
+                <h2 class="lang lang-ru">Образование</h2>
+                <h2 class="lang lang-en">Education</h2>
+                <ul class="list lang lang-ru">
                     <li class="item">
                         <strong>Магистр по наукам о данных</strong> — ВШЭ - ФКН • 2023 - 2025
-                        <div class="meta">ВКР - Анализ CJM пользователя для оптимизации мобильных приложений. GPA 9.1/10</div>
+                        <div class="meta">ВКР — анализ CJM пользователя для оптимизации мобильных приложений. GPA 9.1/10</div>
                     </li>
                     <li class="item">
                         <strong>BSc Finance</strong> — London School of Economics • 2019 - 2023
-                        <div class="meta">Основной трек - финансовая математика, исследовательский проект - анализ маркетмейкеров на криптовалютном рынке. GPA 4.3/5</div>
+                        <div class="meta">Основной трек — финансовая математика, проект — анализ маркетмейкеров на крипторынке. GPA 4.3/5</div>
                     </li>
                     <li class="item">
                         <strong>BSc Fintech</strong> — Финансовый университет при Правительстве РФ • 2019–2023
-                        <div class="meta">ВКР в форме стартапа, проект - прогнозная аналитика продаж на маркетплейсах. GPA 94.2/100</div>
+                        <div class="meta">ВКР в форме стартапа: прогнозная аналитика продаж на маркетплейсах. GPA 94.2/100</div>
+                    </li>
+                </ul>
+                <ul class="list lang lang-en">
+                    <li class="item">
+                        <strong>MSc in Data Science</strong> — HSE, Faculty of Computer Science • 2023 - 2025
+                        <div class="meta">Thesis: user CJM analysis for mobile app optimization. GPA 9.1/10</div>
+                    </li>
+                    <li class="item">
+                        <strong>BSc Finance</strong> — London School of Economics • 2019 - 2023
+                        <div class="meta">Track: financial mathematics; project on market makers in crypto. GPA 4.3/5</div>
+                    </li>
+                    <li class="item">
+                        <strong>BSc Fintech</strong> — Financial University under the Government of the Russian Federation • 2019–2023
+                        <div class="meta">Startup-format thesis on sales forecasting for marketplaces. GPA 94.2/100</div>
                     </li>
                 </ul>
             </section>
@@ -191,8 +320,55 @@
     </div>
 
     <footer class="footer">
-        © Павел Бабошкин — Обновлено: 2026
+        <span class="lang lang-ru inline">© Павел Бабошкин — Обновлено: 2026</span>
+        <span class="lang lang-en inline">© Pavel Baboshkin — Updated: 2026</span>
     </footer>
+    <script>
+        (function () {
+            const defaultLang = navigator.language && navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'en';
+            const storedLang = localStorage.getItem('lang');
+            const lang = storedLang || defaultLang;
+            const buttons = document.querySelectorAll('[data-set-lang]');
+
+            function setLang(nextLang) {
+                document.body.setAttribute('data-lang', nextLang);
+                document.documentElement.setAttribute('lang', nextLang);
+                localStorage.setItem('lang', nextLang);
+                buttons.forEach((button) => {
+                    const isActive = button.getAttribute('data-set-lang') === nextLang;
+                    button.classList.toggle('is-active', isActive);
+                    button.setAttribute('aria-pressed', String(isActive));
+                });
+
+                const titleEl = document.querySelector('title[data-title-ru][data-title-en]');
+                if (titleEl) {
+                    titleEl.textContent = titleEl.getAttribute(`data-title-${nextLang}`) || titleEl.textContent;
+                }
+
+                const ogTitleEl = document.querySelector('meta[property="og:title"][data-title-ru][data-title-en]');
+                if (ogTitleEl) {
+                    ogTitleEl.setAttribute('content', ogTitleEl.getAttribute(`data-title-${nextLang}`) || ogTitleEl.getAttribute('content'));
+                }
+
+                const photoEl = document.querySelector('.photo[data-alt-ru][data-alt-en]');
+                if (photoEl) {
+                    photoEl.setAttribute('alt', photoEl.getAttribute(`data-alt-${nextLang}`) || photoEl.getAttribute('alt'));
+                }
+            }
+
+            buttons.forEach((button) => {
+                button.setAttribute('aria-pressed', 'false');
+                button.addEventListener('click', () => setLang(button.getAttribute('data-set-lang')));
+            });
+
+            setLang(lang);
+
+            const pdfButton = document.getElementById('pdfButton');
+            if (pdfButton) {
+                pdfButton.addEventListener('click', () => window.print());
+            }
+        })();
+    </script>
 </body>
 
 </html>

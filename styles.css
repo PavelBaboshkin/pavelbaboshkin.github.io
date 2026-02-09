@@ -74,6 +74,39 @@ aside {
     box-shadow: var(--shadow);
 }
 
+.controls {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.lang-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.chip {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--text);
+    padding: 6px 12px;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.chip:hover {
+    border-color: var(--accent);
+}
+
+.chip.is-active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
 .photo {
     width: 100%;
     border-radius: 10px;
@@ -164,9 +197,112 @@ p {
     font-size: .92rem;
 }
 
+.lang {
+    display: none;
+}
+
+[data-lang="ru"] .lang-ru {
+    display: block;
+}
+
+[data-lang="en"] .lang-en {
+    display: block;
+}
+
+[data-lang="ru"] .lang-ru.inline,
+[data-lang="en"] .lang-en.inline {
+    display: inline-block;
+}
+
 .footer {
     text-align: center;
     color: var(--muted);
     font-size: .9rem;
     margin: 24px 0;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    :root {
+        --bg: #ffffff;
+        --bg-soft: #ffffff;
+        --text: #000000;
+        --muted: #333333;
+        --border: #e5e7eb;
+        --accent: #000000;
+        --shadow: none;
+    }
+
+    body {
+        color-scheme: light;
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    .controls {
+        display: none;
+    }
+
+    #about,
+    #projects {
+        display: none;
+    }
+
+    .wrap {
+        margin: 0 auto;
+        max-width: 100%;
+        gap: 10px;
+        grid-template-columns: 240px 1fr;
+    }
+
+    aside,
+    section {
+        box-shadow: none;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .role,
+    .meta {
+        font-size: .85rem;
+    }
+
+    .list {
+        padding-left: 14px;
+        margin-top: 4px;
+    }
+
+    .item {
+        margin: 4px 0;
+    }
+
+    p {
+        margin: 0 0 8px;
+    }
+
+    main {
+        gap: 12px;
+    }
 }
