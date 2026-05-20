@@ -247,11 +247,6 @@ p {
         display: none;
     }
 
-    #about,
-    #projects {
-        display: none;
-    }
-
     .wrap {
         margin: 0 auto;
         max-width: 100%;
