@@ -13,7 +13,8 @@
     <meta property="og:url" content="https://pavelbaboshkin.github.io/" />
     <meta property="og:image" content="tab_icon.png" />
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="print.css" media="print" id="printStyles">
+
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -245,7 +246,6 @@
                         <strong>Senior Analyst</strong> — Avito • 2025 - present
                         <div class="meta">
                             <ul>
-                                <li>Build notification delivery algorithms that lift user response.</li>
                                 <li>Created an A/B testing methodology: +25% sensitivity on small segments.</li>
                                 <li>Rolled out a product-impact evaluation approach — initiatives now assessed reliably and comparably.</li>
                                 <li>Launched an uplift modeling MVP for CRM campaigns: +3% on target metrics.</li>
@@ -375,9 +375,51 @@
 
             setLang(lang);
 
+            // PDF одной длинной страницей: меряем высоту резюме в печатных
+            // стилях и задаём @page ровно под неё, чтобы браузер не резал её на A4.
+            const PX_TO_MM = 25.4 / 96; // в печати 1 CSS px = 1/96 дюйма
+            const PAGE_MARGIN_MM = 10;  // должно совпадать с @page в print.css
+            const SLACK_MM = 5;         // запас, чтобы округление не породило вторую страницу
+
+            function updatePrintPageSize() {
+                const printStyles = document.getElementById('printStyles');
+                const bottomEl = document.querySelector('.footer') || document.querySelector('.wrap');
+                if (!printStyles || !bottomEl) return;
+
+                // Применяем печатные стили к экрану, чтобы снять с них размеры.
+                // Перерисовки не будет: media возвращаем до конца текущей задачи.
+                const savedMedia = printStyles.media;
+                printStyles.media = 'all';
+                const contentPx = bottomEl.getBoundingClientRect().bottom
+                    - document.documentElement.getBoundingClientRect().top;
+                printStyles.media = savedMedia;
+
+                if (!(contentPx > 0)) return;
+
+                const pageHeightMm = Math.ceil(contentPx * PX_TO_MM)
+                    + PAGE_MARGIN_MM * 2 + SLACK_MM;
+
+                let pageStyle = document.getElementById('printPageSize');
+                if (!pageStyle) {
+                    pageStyle = document.createElement('style');
+                    pageStyle.id = 'printPageSize';
+                    pageStyle.media = 'print';
+                    document.head.appendChild(pageStyle);
+                }
+                pageStyle.textContent =
+                    `@page { size: 210mm ${pageHeightMm}mm; margin: ${PAGE_MARGIN_MM}mm; }`;
+            }
+
+            // Ловим и печать из браузера (Cmd+P), и клик по кнопке: в Chrome
+            // размер страницы надёжнее задать до вызова window.print().
+            window.addEventListener('beforeprint', updatePrintPageSize);
+
             const pdfButton = document.getElementById('pdfButton');
             if (pdfButton) {
-                pdfButton.addEventListener('click', () => window.print());
+                pdfButton.addEventListener('click', () => {
+                    updatePrintPageSize();
+                    window.print();
+                });
             }
         })();
     </script>

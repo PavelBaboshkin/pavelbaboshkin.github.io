@@ -1,0 +1,110 @@
+/*
+ * Стили печати / экспорта в PDF.
+ *
+ * Подключается как <link rel="stylesheet" href="print.css" media="print">.
+ * Перед печатью скрипт в index.html на мгновение переключает media на "all",
+ * измеряет высоту вёрстки в этих стилях и подставляет её в @page — тогда PDF
+ * скачивается одной длинной страницей, без деления на A4.
+ *
+ * Поэтому здесь НЕ должно быть обёртки @media print: правила обязаны
+ * применяться и при media="all", иначе измерять будет нечего.
+ */
+
+@page {
+    /* Высоту подставляет скрипт; это фолбэк, если JS не отработал. */
+    size: A4;
+    margin: 10mm;
+}
+
+:root {
+    --bg: #ffffff;
+    --bg-soft: #ffffff;
+    --text: #000000;
+    --muted: #333333;
+    --border: #e5e7eb;
+    --accent: #000000;
+    --shadow: none;
+}
+
+html,
+body {
+    /* На экране это 100% — иначе высота страницы упёрлась бы в высоту окна. */
+    height: auto;
+}
+
+body {
+    color-scheme: light;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.controls {
+    display: none;
+}
+
+.wrap {
+    /* 210mm A4 минус поля 2×10mm: фиксируем, чтобы замер не зависел от окна. */
+    width: 190mm;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    grid-template-columns: 240px 1fr;
+}
+
+aside {
+    position: static;
+}
+
+aside,
+section {
+    box-shadow: none;
+    /* Нужно только для фолбэка с обычной A4-пагинацией. */
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+section {
+    padding: 10px;
+}
+
+.name {
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.role,
+.meta {
+    font-size: .85rem;
+}
+
+.list {
+    padding-left: 14px;
+    margin-top: 4px;
+}
+
+.item {
+    margin: 4px 0;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+main {
+    gap: 12px;
+}
+
+.footer {
+    /* Нижний отступ даёт скрипт (запас в @page), тут он только мешал бы замеру. */
+    margin: 12px 0 0;
+}
